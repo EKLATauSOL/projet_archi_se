@@ -1,0 +1,19 @@
+
+State Machine - |DE10_lite_top|nios2_system:u0|nios2_system_nios2_gen2_0:nios2_gen2_0|nios2_system_nios2_gen2_0_cpu:cpu|nios2_system_nios2_gen2_0_cpu_nios2_oci:the_nios2_system_nios2_gen2_0_cpu_nios2_oci|nios2_system_nios2_gen2_0_cpu_debug_slave_wrapper:the_nios2_system_nios2_gen2_0_cpu_debug_slave_wrapper|nios2_system_nios2_gen2_0_cpu_debug_slave_tck:the_nios2_system_nios2_gen2_0_cpu_debug_slave_tck|DRsize
+Name DRsize.101 DRsize.100 DRsize.011 DRsize.010 DRsize.001 DRsize.000 
+DRsize.000 0 0 0 0 0 0 
+DRsize.001 0 0 0 0 1 1 
+DRsize.010 0 0 0 1 0 1 
+DRsize.011 0 0 1 0 0 1 
+DRsize.100 0 1 0 0 0 1 
+DRsize.101 1 0 0 0 0 1 
+
+State Machine - |DE10_lite_top|nios2_system:u0|accel_ctrl:accel_ctrl_0|state
+Name state.IDLE state.READ_RECV state.READ_SEND state.READ_START state.INIT_SEND state.INIT_START state.RESET_STATE 
+state.RESET_STATE 0 0 0 0 0 0 0 
+state.INIT_START 0 0 0 0 0 1 1 
+state.INIT_SEND 0 0 0 0 1 0 1 
+state.READ_START 0 0 0 1 0 0 1 
+state.READ_SEND 0 0 1 0 0 0 1 
+state.READ_RECV 0 1 0 0 0 0 1 
+state.IDLE 1 0 0 0 0 0 1 

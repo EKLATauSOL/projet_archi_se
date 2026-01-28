@@ -1,0 +1,108 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity tb_telemetre_us is
+end entity;
+
+architecture test of tb_telemetre_us is
+
+    component telemetre_us
+        port (
+            clk       : in  std_logic;
+            rst_n     : in  std_logic;
+            echo      : in  std_logic;
+            trig      : out std_logic;
+            dist_cm   : out std_logic_vector(9 downto 0)
+        );
+    end component;
+
+    signal clk       : std_logic := '0';
+    signal rst_n     : std_logic := '0';
+    signal echo      : std_logic := '0';
+    signal trig      : std_logic;
+    signal dist_cm   : std_logic_vector(9 downto 0);
+
+    -- Clock period definitions
+    constant clk_period : time := 20 ns; -- 50 MHz
+
+    -- Signal purement décoratif pour simuler les ondes sonores (40 kHz)
+    signal sim_ultrasonic_burst : std_logic := '0';
+
+begin
+
+    -- Instantiate the Unit Under Test (UUT)
+    uut: telemetre_us
+        port map (
+            clk     => clk,
+            rst_n   => rst_n,
+            echo    => echo,
+            trig    => trig,
+            dist_cm => dist_cm
+        );
+
+    -- Clock process definitions
+    clk_process :process
+    begin
+        clk <= '0';
+        wait for clk_period/2;
+        clk <= '1';
+        wait for clk_period/2;
+    end process;
+
+    -- Processus pour générer les "bips" ultrasoniques (visuel seulement)
+    -- On génère 8 impulsions quand le trigger tombe
+    process
+    begin
+        wait until falling_edge(trig);
+        -- 40 kHz = période de 25 us
+        for i in 1 to 8 loop
+            sim_ultrasonic_burst <= '1';
+            wait for 12.5 us;
+            sim_ultrasonic_burst <= '0';
+            wait for 12.5 us;
+        end loop;
+    end process;
+
+    -- Stimulus process
+    stim_proc: process
+    begin
+        -- Hold reset state for 100 ns.
+        rst_n <= '0';
+        wait for 100 ns;
+        rst_n <= '1';
+        
+        wait for 100 ns;
+
+        -- MESURE 1 : 15 cm
+        wait until rising_edge(trig);
+        report "Trigger 1 detected!";
+        
+        -- Petit temps de réponse du capteur
+        wait for 200 us; 
+        
+        -- Temps pour 15 cm = 15 * 58 = 870 us
+        report "Simulating Echo for 15 cm";
+        echo <= '1';
+        wait for 870 us;
+        echo <= '0';
+
+        -- MESURE 2 : 30 cm
+        -- On attend le prochain cycle généré par l'IP (auto 60ms)
+        wait until rising_edge(trig);
+        report "Trigger 2 detected!";
+        
+        wait for 200 us;
+        
+        -- Temps pour 30 cms = 30 * 58 = 1740 us
+        report "Simulating Echo for 30 cm";
+        echo <= '1';
+        wait for 1740 us;
+        echo <= '0';
+
+        wait for 10 ms;
+
+        assert false report "End of Simulation" severity failure;
+    end process;
+
+end architecture;

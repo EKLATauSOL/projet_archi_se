@@ -1,0 +1,160 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "symbol" (version "1.1"))
+(symbol
+	(rect 0 0 528 472)
+	(text "nios2_system" (rect 224 -1 280 11)(font "Arial" (font_size 10)))
+	(text "inst" (rect 8 456 20 468)(font "Arial" ))
+	(port
+		(pt 0 120)
+		(input)
+		(text "accel_gsensor_sdo" (rect 0 0 77 12)(font "Arial" (font_size 8)))
+		(text "accel_gsensor_sdo" (rect 4 109 106 120)(font "Arial" (font_size 8)))
+		(line (pt 0 120)(pt 224 120)(line_width 1))
+	)
+	(port
+		(pt 0 160)
+		(input)
+		(text "clk_clk" (rect 0 0 27 12)(font "Arial" (font_size 8)))
+		(text "clk_clk" (rect 4 149 46 160)(font "Arial" (font_size 8)))
+		(line (pt 0 160)(pt 224 160)(line_width 1))
+	)
+	(port
+		(pt 0 280)
+		(input)
+		(text "key_external_connection_export[1..0]" (rect 0 0 148 12)(font "Arial" (font_size 8)))
+		(text "key_external_connection_export[1..0]" (rect 4 269 220 280)(font "Arial" (font_size 8)))
+		(line (pt 0 280)(pt 224 280)(line_width 3))
+	)
+	(port
+		(pt 0 400)
+		(input)
+		(text "reset_reset_n" (rect 0 0 56 12)(font "Arial" (font_size 8)))
+		(text "reset_reset_n" (rect 4 389 82 400)(font "Arial" (font_size 8)))
+		(line (pt 0 400)(pt 224 400)(line_width 1))
+	)
+	(port
+		(pt 0 440)
+		(input)
+		(text "sw_external_connection_export[9..0]" (rect 0 0 145 12)(font "Arial" (font_size 8)))
+		(text "sw_external_connection_export[9..0]" (rect 4 429 214 440)(font "Arial" (font_size 8)))
+		(line (pt 0 440)(pt 224 440)(line_width 3))
+	)
+	(port
+		(pt 0 72)
+		(output)
+		(text "accel_gsensor_cs_n" (rect 0 0 83 12)(font "Arial" (font_size 8)))
+		(text "accel_gsensor_cs_n" (rect 4 61 112 72)(font "Arial" (font_size 8)))
+		(line (pt 0 72)(pt 224 72)(line_width 1))
+	)
+	(port
+		(pt 0 88)
+		(output)
+		(text "accel_gsensor_sclk" (rect 0 0 79 12)(font "Arial" (font_size 8)))
+		(text "accel_gsensor_sclk" (rect 4 77 112 88)(font "Arial" (font_size 8)))
+		(line (pt 0 88)(pt 224 88)(line_width 1))
+	)
+	(port
+		(pt 0 104)
+		(output)
+		(text "accel_gsensor_sdi" (rect 0 0 74 12)(font "Arial" (font_size 8)))
+		(text "accel_gsensor_sdi" (rect 4 93 106 104)(font "Arial" (font_size 8)))
+		(line (pt 0 104)(pt 224 104)(line_width 1))
+	)
+	(port
+		(pt 0 200)
+		(output)
+		(text "hex3_0_external_connection_export[31..0]" (rect 0 0 167 12)(font "Arial" (font_size 8)))
+		(text "hex3_0_external_connection_export[31..0]" (rect 4 189 244 200)(font "Arial" (font_size 8)))
+		(line (pt 0 200)(pt 224 200)(line_width 3))
+	)
+	(port
+		(pt 0 240)
+		(output)
+		(text "hex5_4_external_connection_export[15..0]" (rect 0 0 168 12)(font "Arial" (font_size 8)))
+		(text "hex5_4_external_connection_export[15..0]" (rect 4 229 244 240)(font "Arial" (font_size 8)))
+		(line (pt 0 240)(pt 224 240)(line_width 3))
+	)
+	(port
+		(pt 0 320)
+		(output)
+		(text "led_external_connection_export[9..0]" (rect 0 0 145 12)(font "Arial" (font_size 8)))
+		(text "led_external_connection_export[9..0]" (rect 4 309 220 320)(font "Arial" (font_size 8)))
+		(line (pt 0 320)(pt 224 320)(line_width 3))
+	)
+	(port
+		(pt 0 360)
+		(output)
+		(text "pwmled_output" (rect 0 0 59 12)(font "Arial" (font_size 8)))
+		(text "pwmled_output" (rect 4 349 82 360)(font "Arial" (font_size 8)))
+		(line (pt 0 360)(pt 224 360)(line_width 1))
+	)
+	(drawing
+		(text "accel" (rect 196 43 422 99)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "gsensor_cs_n" (rect 229 67 530 144)(font "Arial" (color 0 0 0)))
+		(text "gsensor_sclk" (rect 229 83 530 176)(font "Arial" (color 0 0 0)))
+		(text "gsensor_sdi" (rect 229 99 524 208)(font "Arial" (color 0 0 0)))
+		(text "gsensor_sdo" (rect 229 115 524 240)(font "Arial" (color 0 0 0)))
+		(text "clk" (rect 209 131 436 275)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "clk" (rect 229 155 476 320)(font "Arial" (color 0 0 0)))
+		(text "hex3_0_external_connection" (rect 60 171 276 355)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 229 195 494 400)(font "Arial" (color 0 0 0)))
+		(text "hex5_4_external_connection" (rect 60 211 276 435)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 229 235 494 480)(font "Arial" (color 0 0 0)))
+		(text "key_external_connection" (rect 82 251 302 515)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 229 275 494 560)(font "Arial" (color 0 0 0)))
+		(text "led_external_connection" (rect 85 291 308 595)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 229 315 494 640)(font "Arial" (color 0 0 0)))
+		(text "pwmled" (rect 180 331 396 675)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "output" (rect 229 355 494 720)(font "Arial" (color 0 0 0)))
+		(text "reset" (rect 195 371 420 755)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "reset_n" (rect 229 395 500 800)(font "Arial" (color 0 0 0)))
+		(text "sw_external_connection" (rect 85 411 302 835)(font "Arial" (color 128 0 0)(font_size 9)))
+		(text "export" (rect 229 435 494 880)(font "Arial" (color 0 0 0)))
+		(text " nios2_system " (rect 465 456 1014 922)(font "Arial" ))
+		(line (pt 224 32)(pt 304 32)(line_width 1))
+		(line (pt 304 32)(pt 304 456)(line_width 1))
+		(line (pt 224 456)(pt 304 456)(line_width 1))
+		(line (pt 224 32)(pt 224 456)(line_width 1))
+		(line (pt 225 52)(pt 225 124)(line_width 1))
+		(line (pt 226 52)(pt 226 124)(line_width 1))
+		(line (pt 225 140)(pt 225 164)(line_width 1))
+		(line (pt 226 140)(pt 226 164)(line_width 1))
+		(line (pt 225 180)(pt 225 204)(line_width 1))
+		(line (pt 226 180)(pt 226 204)(line_width 1))
+		(line (pt 225 220)(pt 225 244)(line_width 1))
+		(line (pt 226 220)(pt 226 244)(line_width 1))
+		(line (pt 225 260)(pt 225 284)(line_width 1))
+		(line (pt 226 260)(pt 226 284)(line_width 1))
+		(line (pt 225 300)(pt 225 324)(line_width 1))
+		(line (pt 226 300)(pt 226 324)(line_width 1))
+		(line (pt 225 340)(pt 225 364)(line_width 1))
+		(line (pt 226 340)(pt 226 364)(line_width 1))
+		(line (pt 225 380)(pt 225 404)(line_width 1))
+		(line (pt 226 380)(pt 226 404)(line_width 1))
+		(line (pt 225 420)(pt 225 444)(line_width 1))
+		(line (pt 226 420)(pt 226 444)(line_width 1))
+		(line (pt 0 0)(pt 528 0)(line_width 1))
+		(line (pt 528 0)(pt 528 472)(line_width 1))
+		(line (pt 0 472)(pt 528 472)(line_width 1))
+		(line (pt 0 0)(pt 0 472)(line_width 1))
+	)
+)
