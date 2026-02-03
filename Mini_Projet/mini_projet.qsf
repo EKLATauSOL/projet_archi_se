@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M50DAF484C7G
-set_global_assignment -name TOP_LEVEL_ENTITY DE10_Lite_Test_UL
+set_global_assignment -name TOP_LEVEL_ENTITY DE10_Lite_Servo_Test
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:24:49  JANUARY 28, 2026"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -60,9 +60,21 @@ set_location_assignment PIN_E14 -to LEDR[6]
 set_location_assignment PIN_D14 -to LEDR[7]
 set_location_assignment PIN_A11 -to LEDR[8]
 set_location_assignment PIN_B11 -to LEDR[9]
+set_location_assignment PIN_C10 -to SW[0]
+set_location_assignment PIN_C11 -to SW[1]
+set_location_assignment PIN_D12 -to SW[2]
+set_location_assignment PIN_C12 -to SW[3]
+set_location_assignment PIN_A12 -to SW[4]
+set_location_assignment PIN_B12 -to SW[5]
+set_location_assignment PIN_A13 -to SW[6]
+set_location_assignment PIN_A14 -to SW[7]
+set_location_assignment PIN_V10 -to GPIO[0]
+
 
 
 set_global_assignment -name SOURCE_FILE mini_projet.qsf
+set_global_assignment -name VHDL_FILE peripherique/servomoteur.vhd
+set_global_assignment -name VHDL_FILE DE10_Lite_Servo_Test.vhd
 set_global_assignment -name VHDL_FILE peripherique/telemetre_us.vhd
 set_global_assignment -name VHDL_FILE peripherique/tb_telemetre_us.vhd
 set_global_assignment -name VHDL_FILE DE10_Lite_Test_UL.vhd
