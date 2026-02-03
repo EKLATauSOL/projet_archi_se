@@ -1,0 +1,129 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/alexa/Desktop/VHDL/projet/projet_archi_se/Mini_Projet/peripherique
+Eip_servo_avalon
+Z1 w1770112140
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8IP_Servo_Avalon.vhd
+Z6 FIP_Servo_Avalon.vhd
+l0
+L5
+VenRBSh@S?K:]H@G05mZ6H1
+!s100 9<ZflY`HfA=LSQDYiL>oD1
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1770114647
+!i10b 1
+Z9 !s108 1770114647.000000
+Z10 !s90 -reportprogress|300|IP_Servo_Avalon.vhd|
+Z11 !s107 IP_Servo_Avalon.vhd|
+!i113 1
+Z12 tExplicit 1 CvgOpt 0
+Artl
+Z13 DEx4 work 11 servomoteur 0 22 2<=^bAi8lEI?bFUDW=h@l3
+R2
+R3
+R4
+Z14 DEx4 work 15 ip_servo_avalon 0 22 enRBSh@S?K:]H@G05mZ6H1
+l23
+L20
+V^`z5;[Fkd[PnMAU=AmHNj3
+!s100 ]W?jea0lCnIcbV@RSaQ7g0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+Eservomoteur
+Z15 w1770112335
+R2
+R3
+R4
+R0
+Z16 8servomoteur.vhd
+Z17 Fservomoteur.vhd
+l0
+L5
+V2<=^bAi8lEI?bFUDW=h@l3
+!s100 6Ul:koBkL4[Xib;UDI3Zh2
+R7
+32
+R8
+!i10b 1
+R9
+Z18 !s90 -reportprogress|300|servomoteur.vhd|
+Z19 !s107 servomoteur.vhd|
+!i113 1
+R12
+Abhv
+R2
+R3
+R4
+R13
+l29
+L14
+V98fbGzKH<@<D_NPXIZ@LX2
+!s100 _]lnH2_5]9Hj:z4]>2`Dm0
+R7
+32
+R8
+!i10b 1
+R9
+R18
+R19
+!i113 1
+R12
+Etb_ip_servo_avalon
+Z20 w1770114453
+R2
+R3
+R4
+R0
+Z21 8tb_IP_Servo_Avalon.vhd
+Z22 Ftb_IP_Servo_Avalon.vhd
+l0
+L5
+V5^GN4VU;o994OKIkDioeH3
+!s100 kG=2XIce@ab`ZV@<2KIW[0
+R7
+32
+R8
+!i10b 1
+R9
+Z23 !s90 -reportprogress|300|tb_IP_Servo_Avalon.vhd|
+Z24 !s107 tb_IP_Servo_Avalon.vhd|
+!i113 1
+R12
+Atest
+R14
+R2
+R3
+R4
+DEx4 work 18 tb_ip_servo_avalon 0 22 5^GN4VU;o994OKIkDioeH3
+l18
+L8
+VKQLYH>g6Bfl?I9XYNAbnH2
+!s100 dEic[lK`KR157[me:5e3?2
+R7
+32
+R8
+!i10b 1
+R9
+R23
+R24
+!i113 1
+R12
