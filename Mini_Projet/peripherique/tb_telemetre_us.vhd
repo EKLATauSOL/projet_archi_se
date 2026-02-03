@@ -57,37 +57,42 @@ begin
         
         wait for 100 ns;
 
-        -- Le module doit générer un Trigger automatiquement.
-        -- On attend le front montant du trigger.
+        -- =========================================================
+        -- CAS 1 : PAS D'ECHO (Timeout)
+        -- =========================================================
         wait until rising_edge(trig);
-        report "Trigger detected!";
+        report "CAS 1: Trigger detected (No Echo Test)";
+        -- On ne lève jamais 'echo', on laisse le timeout agir
+        echo <= '0';
         
-        -- Le capteur réel met un peu de temps avant de répondre (holdoff), par ex 200us
-        wait for 200 us;
+        -- =========================================================
+        -- CAS 2 : ECHO DE 20 cm
+        -- =========================================================
+        -- Attendre le prochain cycle (auto 60ms)
+        wait until rising_edge(trig);
+        report "CAS 2: Trigger detected (20 cm Test)";
+        wait for 200 us; -- Temps de réponse capteur
         
-        -- Simulation d'un retour d'écho pour une distance de 10 cm.
-        -- Temps = 10 cm * 58 us/cm = 580 us.
-        report "Simulating Echo for 10 cm (580 us)";
+        -- Durée = 20 * 58 us = 1160 us
+        report "Simulating Echo for 20 cm (1160 us)";
         echo <= '1';
-        wait for 580 us;
+        wait for 1160 us;
         echo <= '0';
 
-        wait for 1 ms;
-
-        -- Attendre le prochain cycle de trigger (cycle total de 60ms)
+        -- =========================================================
+        -- CAS 3 : ECHO MAX (400 cm)
+        -- =========================================================
         wait until rising_edge(trig);
-        report "Second Trigger detected!";
-        
-         -- Simulation d'un retour d'écho pour une distance de 50 cm.
-        -- Temps = 50 cm * 58 us/cm = 2900 us = 2.9 ms
+        report "CAS 3: Trigger detected (400 cm Test)";
         wait for 200 us;
-        report "Simulating Echo for 50 cm (2.9 ms)";
+        
+        -- Durée = 400 * 58 us = 23200 us = 23.2 ms
+        report "Simulating Echo for 400 cm (23.2 ms)";
         echo <= '1';
-        wait for 2900 us;
+        wait for 23200 us;
         echo <= '0';
 
-        wait for 10 ms;
-
+        wait for 100 ms; -- Wait enough time to see the end
         assert false report "End of Simulation" severity failure;
     end process;
 

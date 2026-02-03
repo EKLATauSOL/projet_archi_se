@@ -26,6 +26,7 @@ architecture bhv of telemetre_us is
     signal distance_buffer : unsigned(9 downto 0) := (others => '0');
     signal echo_sync       : std_logic;
     signal echo_prev       : std_logic;
+    signal dist_cm_reg     : std_logic_vector(9 downto 0) := (others => '0');
 
 begin
 
@@ -72,6 +73,12 @@ begin
             else
                 -- Si echo est bas, on remet le compteur partielle à 0
                 cnt_echo <= 0;
+                
+                -- Detect Falling Edge of Echo to update output
+                if echo_prev = '1' and echo_sync = '0' then
+                    dist_cm_reg <= std_logic_vector(distance_buffer);
+                end if;
+                
                 -- On reset le buffer au début du prochain cycle de trigger pour une nouvelle mesure
                 if cnt_global = 0 then
                     distance_buffer <= (others => '0');
@@ -80,6 +87,6 @@ begin
         end if;
     end process;
 
-    dist_cm <= std_logic_vector(distance_buffer);
+    dist_cm <= dist_cm_reg;
 
 end architecture;

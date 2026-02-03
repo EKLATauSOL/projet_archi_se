@@ -63,6 +63,7 @@ set_location_assignment PIN_B11 -to LEDR[9]
 
 
 set_global_assignment -name SOURCE_FILE mini_projet.qsf
+set_global_assignment -name QIP_FILE nios2_system/synthesis/nios2_system.qip
 set_global_assignment -name VHDL_FILE peripherique/telemetre_us.vhd
 set_global_assignment -name VHDL_FILE peripherique/tb_telemetre_us.vhd
 set_global_assignment -name VHDL_FILE DE10_Lite_Test_UL.vhd

@@ -12,33 +12,25 @@ end entity;
 
 architecture rtl of DE10_Lite_Test_UL is
 
-    component telemetre_us is
+    component nios2_system is
         port (
-            clk     : in  std_logic;
-            rst_n   : in  std_logic;
-            echo    : in  std_logic;
-            trig    : out std_logic;
-            dist_cm : out std_logic_vector(9 downto 0)
+            clk_clk                           : in  std_logic := 'X'; -- clk
+            reset_reset_n                     : in  std_logic := 'X'; -- reset_n
+            telemetre_us_avalon_trig          : out std_logic;
+            telemetre_us_avalon_echo          : in  std_logic := 'X';
+            telemetre_us_avalon_dist          : out std_logic_vector(9 downto 0)
         );
-    end component;
+    end component nios2_system;
 
 begin
 
-    -- Instanciation de l'IP Telemetre
-    -- Connexions selon le tableau du sujet :
-    -- Rst_n   -> KEY0
-    -- CLK     -> MAX10_CLK1_50
-    -- Trig    -> GPIO_[1] (PIN_W10)
-    -- Echo    -> GPIO_[3] (PIN_W9)
-    -- Dist_cm -> LEDR[9..0]
-
-    u0 : telemetre_us
+    u0 : component nios2_system
         port map (
-            clk     => MAX10_CLK1_50,
-            rst_n   => KEY(0),
-            echo    => GPIO(3),
-            trig    => GPIO(1),
-            dist_cm => LEDR
+            clk_clk                           => MAX10_CLK1_50,
+            reset_reset_n                     => KEY(0),
+            telemetre_us_avalon_dist          => LEDR,
+            telemetre_us_avalon_echo          => GPIO(3),
+            telemetre_us_avalon_trig          => GPIO(1)
         );
 
 end architecture;

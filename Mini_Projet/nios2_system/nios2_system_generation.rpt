@@ -1,0 +1,178 @@
+Info: Starting: Create block symbol file (.bsf)
+Info: qsys-generate C:\Users\Eddy\Documents\esiea\5A\archi_se\Mini_Projet\nios2_system.qsys --block-symbol-file --output-directory=C:\Users\Eddy\Documents\esiea\5A\archi_se\Mini_Projet\nios2_system --family="MAX 10" --part=10M50DAF484C7G
+Progress: Loading Mini_Projet/nios2_system.qsys
+Progress: Reading input file
+Progress: Adding HEX3_0 [altera_avalon_pio 18.1]
+Progress: Parameterizing module HEX3_0
+Progress: Adding HEX5_4 [altera_avalon_pio 18.1]
+Progress: Parameterizing module HEX5_4
+Progress: Adding KEY [altera_avalon_pio 18.1]
+Progress: Parameterizing module KEY
+Progress: Adding LED [altera_avalon_pio 18.1]
+Progress: Parameterizing module LED
+Progress: Adding SW [altera_avalon_pio 18.1]
+Progress: Parameterizing module SW
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding pwm0 [pwm_avalon 1.0]
+Progress: Parameterizing module pwm0
+Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 18.1]
+Progress: Parameterizing module sysid_qsys_0
+Progress: Adding telemetre_us_avalon_0 [telemetre_us_avalon 1.0]
+Progress: Parameterizing module telemetre_us_avalon_0
+Progress: Adding timer_0 [altera_avalon_timer 18.1]
+Progress: Parameterizing module timer_0
+Progress: Adding timer_1 [altera_avalon_timer 18.1]
+Progress: Parameterizing module timer_1
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: nios2_system.KEY: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: nios2_system.SW: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: nios2_system.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: nios2_system.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: nios2_system.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Info: qsys-generate succeeded.
+Info: Finished: Create block symbol file (.bsf)
+Info: 
+Info: Starting: Create HDL design files for synthesis
+Info: qsys-generate C:\Users\Eddy\Documents\esiea\5A\archi_se\Mini_Projet\nios2_system.qsys --synthesis=VERILOG --output-directory=C:\Users\Eddy\Documents\esiea\5A\archi_se\Mini_Projet\nios2_system\synthesis --family="MAX 10" --part=10M50DAF484C7G
+Progress: Loading Mini_Projet/nios2_system.qsys
+Progress: Reading input file
+Progress: Adding HEX3_0 [altera_avalon_pio 18.1]
+Progress: Parameterizing module HEX3_0
+Progress: Adding HEX5_4 [altera_avalon_pio 18.1]
+Progress: Parameterizing module HEX5_4
+Progress: Adding KEY [altera_avalon_pio 18.1]
+Progress: Parameterizing module KEY
+Progress: Adding LED [altera_avalon_pio 18.1]
+Progress: Parameterizing module LED
+Progress: Adding SW [altera_avalon_pio 18.1]
+Progress: Parameterizing module SW
+Progress: Adding clk_0 [clock_source 18.1]
+Progress: Parameterizing module clk_0
+Progress: Adding jtag_uart_0 [altera_avalon_jtag_uart 18.1]
+Progress: Parameterizing module jtag_uart_0
+Progress: Adding nios2_gen2_0 [altera_nios2_gen2 18.1]
+Progress: Parameterizing module nios2_gen2_0
+Progress: Adding onchip_memory2_0 [altera_avalon_onchip_memory2 18.1]
+Progress: Parameterizing module onchip_memory2_0
+Progress: Adding pwm0 [pwm_avalon 1.0]
+Progress: Parameterizing module pwm0
+Progress: Adding sysid_qsys_0 [altera_avalon_sysid_qsys 18.1]
+Progress: Parameterizing module sysid_qsys_0
+Progress: Adding telemetre_us_avalon_0 [telemetre_us_avalon 1.0]
+Progress: Parameterizing module telemetre_us_avalon_0
+Progress: Adding timer_0 [altera_avalon_timer 18.1]
+Progress: Parameterizing module timer_0
+Progress: Adding timer_1 [altera_avalon_timer 18.1]
+Progress: Parameterizing module timer_1
+Progress: Building connections
+Progress: Parameterizing connections
+Progress: Validating
+Progress: Done reading input file
+Info: nios2_system.KEY: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: nios2_system.SW: PIO inputs are not hardwired in test bench. Undefined values will be read from PIO inputs during simulation.
+Info: nios2_system.jtag_uart_0: JTAG UART IP input clock need to be at least double (2x) the operating frequency of JTAG TCK on board
+Info: nios2_system.sysid_qsys_0: System ID is not assigned automatically. Edit the System ID parameter to provide a unique ID
+Info: nios2_system.sysid_qsys_0: Time stamp will be automatically updated when this component is generated.
+Info: nios2_system: Generating nios2_system "nios2_system" for QUARTUS_SYNTH
+Info: HEX3_0: Starting RTL generation for module 'nios2_system_HEX3_0'
+Info: HEX3_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios2_system_HEX3_0 --dir=C:/Users/Eddy/AppData/Local/Temp/alt0487_1995454553011236031.dir/0065_HEX3_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Eddy/AppData/Local/Temp/alt0487_1995454553011236031.dir/0065_HEX3_0_gen//nios2_system_HEX3_0_component_configuration.pl  --do_build_sim=0  ]
+Info: HEX3_0: Done RTL generation for module 'nios2_system_HEX3_0'
+Info: HEX3_0: "nios2_system" instantiated altera_avalon_pio "HEX3_0"
+Info: HEX5_4: Starting RTL generation for module 'nios2_system_HEX5_4'
+Info: HEX5_4:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios2_system_HEX5_4 --dir=C:/Users/Eddy/AppData/Local/Temp/alt0487_1995454553011236031.dir/0066_HEX5_4_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Eddy/AppData/Local/Temp/alt0487_1995454553011236031.dir/0066_HEX5_4_gen//nios2_system_HEX5_4_component_configuration.pl  --do_build_sim=0  ]
+Info: HEX5_4: Done RTL generation for module 'nios2_system_HEX5_4'
+Info: HEX5_4: "nios2_system" instantiated altera_avalon_pio "HEX5_4"
+Info: KEY: Starting RTL generation for module 'nios2_system_KEY'
+Info: KEY:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios2_system_KEY --dir=C:/Users/Eddy/AppData/Local/Temp/alt0487_1995454553011236031.dir/0067_KEY_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Eddy/AppData/Local/Temp/alt0487_1995454553011236031.dir/0067_KEY_gen//nios2_system_KEY_component_configuration.pl  --do_build_sim=0  ]
+Info: KEY: Done RTL generation for module 'nios2_system_KEY'
+Info: KEY: "nios2_system" instantiated altera_avalon_pio "KEY"
+Info: LED: Starting RTL generation for module 'nios2_system_LED'
+Info: LED:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios2_system_LED --dir=C:/Users/Eddy/AppData/Local/Temp/alt0487_1995454553011236031.dir/0068_LED_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Eddy/AppData/Local/Temp/alt0487_1995454553011236031.dir/0068_LED_gen//nios2_system_LED_component_configuration.pl  --do_build_sim=0  ]
+Info: LED: Done RTL generation for module 'nios2_system_LED'
+Info: LED: "nios2_system" instantiated altera_avalon_pio "LED"
+Info: SW: Starting RTL generation for module 'nios2_system_SW'
+Info: SW:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_pio/generate_rtl.pl --name=nios2_system_SW --dir=C:/Users/Eddy/AppData/Local/Temp/alt0487_1995454553011236031.dir/0069_SW_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Eddy/AppData/Local/Temp/alt0487_1995454553011236031.dir/0069_SW_gen//nios2_system_SW_component_configuration.pl  --do_build_sim=0  ]
+Info: SW: Done RTL generation for module 'nios2_system_SW'
+Info: SW: "nios2_system" instantiated altera_avalon_pio "SW"
+Info: jtag_uart_0: Starting RTL generation for module 'nios2_system_jtag_uart_0'
+Info: jtag_uart_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_jtag_uart/generate_rtl.pl --name=nios2_system_jtag_uart_0 --dir=C:/Users/Eddy/AppData/Local/Temp/alt0487_1995454553011236031.dir/0070_jtag_uart_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Eddy/AppData/Local/Temp/alt0487_1995454553011236031.dir/0070_jtag_uart_0_gen//nios2_system_jtag_uart_0_component_configuration.pl  --do_build_sim=0  ]
+Info: jtag_uart_0: Done RTL generation for module 'nios2_system_jtag_uart_0'
+Info: jtag_uart_0: "nios2_system" instantiated altera_avalon_jtag_uart "jtag_uart_0"
+Info: nios2_gen2_0: "nios2_system" instantiated altera_nios2_gen2 "nios2_gen2_0"
+Info: onchip_memory2_0: Starting RTL generation for module 'nios2_system_onchip_memory2_0'
+Info: onchip_memory2_0:   Generation command is [exec C:/intelfpga_lite/18.1/quartus/bin64/perl/bin/perl.exe -I C:/intelfpga_lite/18.1/quartus/bin64/perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_onchip_memory2/generate_rtl.pl --name=nios2_system_onchip_memory2_0 --dir=C:/Users/Eddy/AppData/Local/Temp/alt0487_1995454553011236031.dir/0071_onchip_memory2_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Eddy/AppData/Local/Temp/alt0487_1995454553011236031.dir/0071_onchip_memory2_0_gen//nios2_system_onchip_memory2_0_component_configuration.pl  --do_build_sim=0  ]
+Info: onchip_memory2_0: Done RTL generation for module 'nios2_system_onchip_memory2_0'
+Info: onchip_memory2_0: "nios2_system" instantiated altera_avalon_onchip_memory2 "onchip_memory2_0"
+Info: pwm0: "nios2_system" instantiated pwm_avalon "pwm0"
+Info: sysid_qsys_0: "nios2_system" instantiated altera_avalon_sysid_qsys "sysid_qsys_0"
+Info: telemetre_us_avalon_0: "nios2_system" instantiated telemetre_us_avalon "telemetre_us_avalon_0"
+Info: timer_0: Starting RTL generation for module 'nios2_system_timer_0'
+Info: timer_0:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//perl/bin/perl.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/common -I C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer -- C:/intelfpga_lite/18.1/quartus/../ip/altera/sopc_builder_ip/altera_avalon_timer/generate_rtl.pl --name=nios2_system_timer_0 --dir=C:/Users/Eddy/AppData/Local/Temp/alt0487_1995454553011236031.dir/0075_timer_0_gen/ --quartus_dir=C:/intelfpga_lite/18.1/quartus --verilog --config=C:/Users/Eddy/AppData/Local/Temp/alt0487_1995454553011236031.dir/0075_timer_0_gen//nios2_system_timer_0_component_configuration.pl  --do_build_sim=0  ]
+Info: timer_0: Done RTL generation for module 'nios2_system_timer_0'
+Info: timer_0: "nios2_system" instantiated altera_avalon_timer "timer_0"
+Info: avalon_st_adapter: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_001: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_002: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_003: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_004: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_005: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_006: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_007: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_008: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_009: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_010: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_011: Inserting error_adapter: error_adapter_0
+Info: avalon_st_adapter_012: Inserting error_adapter: error_adapter_0
+Info: mm_interconnect_0: "nios2_system" instantiated altera_mm_interconnect "mm_interconnect_0"
+Info: irq_mapper: "nios2_system" instantiated altera_irq_mapper "irq_mapper"
+Info: rst_controller: "nios2_system" instantiated altera_reset_controller "rst_controller"
+Info: cpu: Starting RTL generation for module 'nios2_system_nios2_gen2_0_cpu'
+Info: cpu:   Generation command is [exec C:/intelFPGA_lite/18.1/quartus/bin64//eperlcmd.exe -I C:/intelFPGA_lite/18.1/quartus/bin64//perl/lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/europa -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin/perl_lib -I C:/intelfpga_lite/18.1/quartus/sopc_builder/bin -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/cpu_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/nios_lib -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -I C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2 -- C:/intelfpga_lite/18.1/quartus/../ip/altera/nios2_ip/altera_nios2_gen2/generate_rtl.epl --name=nios2_system_nios2_gen2_0_cpu --dir=C:/Users/Eddy/AppData/Local/Temp/alt0487_1995454553011236031.dir/0078_cpu_gen/ --quartus_bindir=C:/intelFPGA_lite/18.1/quartus/bin64/ --verilog --config=C:/Users/Eddy/AppData/Local/Temp/alt0487_1995454553011236031.dir/0078_cpu_gen//nios2_system_nios2_gen2_0_cpu_processor_configuration.pl  --do_build_sim=0  ]
+Info: cpu: # 2026.02.03 11:28:04 (*) Starting Nios II generation
+Info: cpu: # 2026.02.03 11:28:04 (*)   Checking for plaintext license.
+Info: cpu: # 2026.02.03 11:28:05 (*)   Couldn't query license setup in Quartus directory C:/intelFPGA_lite/18.1/quartus/bin64/
+Info: cpu: # 2026.02.03 11:28:05 (*)   Defaulting to contents of LM_LICENSE_FILE environment variable
+Info: cpu: # 2026.02.03 11:28:05 (*)   LM_LICENSE_FILE environment variable is empty
+Info: cpu: # 2026.02.03 11:28:05 (*)   Plaintext license not found.
+Info: cpu: # 2026.02.03 11:28:05 (*)   No license required to generate encrypted Nios II/e.
+Info: cpu: # 2026.02.03 11:28:05 (*)   Elaborating CPU configuration settings
+Info: cpu: # 2026.02.03 11:28:05 (*)   Creating all objects for CPU
+Info: cpu: # 2026.02.03 11:28:05 (*)   Generating RTL from CPU objects
+Info: cpu: # 2026.02.03 11:28:05 (*)   Creating plain-text RTL
+Info: cpu: # 2026.02.03 11:28:06 (*) Done Nios II generation
+Info: cpu: Done RTL generation for module 'nios2_system_nios2_gen2_0_cpu'
+Info: cpu: "nios2_gen2_0" instantiated altera_nios2_gen2_unit "cpu"
+Info: nios2_gen2_0_data_master_translator: "mm_interconnect_0" instantiated altera_merlin_master_translator "nios2_gen2_0_data_master_translator"
+Info: jtag_uart_0_avalon_jtag_slave_translator: "mm_interconnect_0" instantiated altera_merlin_slave_translator "jtag_uart_0_avalon_jtag_slave_translator"
+Info: nios2_gen2_0_data_master_agent: "mm_interconnect_0" instantiated altera_merlin_master_agent "nios2_gen2_0_data_master_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent: "mm_interconnect_0" instantiated altera_merlin_slave_agent "jtag_uart_0_avalon_jtag_slave_agent"
+Info: jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo: "mm_interconnect_0" instantiated altera_avalon_sc_fifo "jtag_uart_0_avalon_jtag_slave_agent_rsp_fifo"
+Info: router: "mm_interconnect_0" instantiated altera_merlin_router "router"
+Info: router_001: "mm_interconnect_0" instantiated altera_merlin_router "router_001"
+Info: router_002: "mm_interconnect_0" instantiated altera_merlin_router "router_002"
+Info: router_005: "mm_interconnect_0" instantiated altera_merlin_router "router_005"
+Info: cmd_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux"
+Info: cmd_demux_001: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "cmd_demux_001"
+Info: cmd_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux"
+Info: cmd_mux_003: "mm_interconnect_0" instantiated altera_merlin_multiplexer "cmd_mux_003"
+Info: Reusing file C:/Users/Eddy/Documents/esiea/5A/archi_se/Mini_Projet/nios2_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_demux: "mm_interconnect_0" instantiated altera_merlin_demultiplexer "rsp_demux"
+Info: rsp_mux: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux"
+Info: Reusing file C:/Users/Eddy/Documents/esiea/5A/archi_se/Mini_Projet/nios2_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: rsp_mux_001: "mm_interconnect_0" instantiated altera_merlin_multiplexer "rsp_mux_001"
+Info: Reusing file C:/Users/Eddy/Documents/esiea/5A/archi_se/Mini_Projet/nios2_system/synthesis/submodules/altera_merlin_arbitrator.sv
+Info: avalon_st_adapter: "mm_interconnect_0" instantiated altera_avalon_st_adapter "avalon_st_adapter"
+Info: error_adapter_0: "avalon_st_adapter" instantiated error_adapter "error_adapter_0"
+Info: nios2_system: Done "nios2_system" with 35 modules, 47 files
+Info: qsys-generate succeeded.
+Info: Finished: Create HDL design files for synthesis
