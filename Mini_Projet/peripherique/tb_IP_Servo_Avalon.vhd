@@ -44,33 +44,33 @@ begin
         reset_n <= '1';
         wait for 100 ns;
 
-        -- 2. Écriture Position 0° (valeur 0x00)
+        -- 2. Écriture Position 0°
         report "Ecriture Avalon : Position 0";
         chipselect <= '1';
         write_n    <= '0';
-        writedata  <= x"00000000";
+        writedata  <= "00000000000000000000000000000000";
         wait for CLK_PERIOD;
         chipselect <= '0';
         write_n    <= '1';
         
         wait for 21 ms;
 
-        -- 3. Écriture Position 90° (valeur 0x7F = 127)
+        -- 3. Écriture Position 90° (valeur 127)
         report "Ecriture Avalon : Position 90";
         chipselect <= '1';
         write_n    <= '0';
-        writedata  <= x"0000007F";
+        writedata  <= "00000000000000000000000001111111";
         wait for CLK_PERIOD;
         chipselect <= '0';
         write_n    <= '1';
 
         wait for 21 ms;
 
-        -- 4. Écriture Position 180° (valeur 0xFF = 255)
+        -- 4. Écriture Position 180° (valeur 255)
         report "Ecriture Avalon : Position 180";
         chipselect <= '1';
         write_n    <= '0';
-        writedata  <= x"000000FF";
+        writedata  <= "00000000000000000000000011111111";
         wait for CLK_PERIOD;
         chipselect <= '0';
         write_n    <= '1';

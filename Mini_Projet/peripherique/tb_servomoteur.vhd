@@ -36,22 +36,22 @@ begin
     begin
         -- Initialisation
         reset_n <= '0';
-        position <= x"00";
+        position <= "00000000";
         wait for 100 ns;
         reset_n <= '1';
 
         -- Test Position 0 (doit donner une impulsion de 1ms)
-        position <= x"00";
+        position <= "00000000";
         report "Test Position 0 (0 degres)";
         wait for 21 ms; -- Attendre une période PWM complète (20ms + marge)
 
         -- Test Position 127 (approx 90 degres, doit donner une impulsion de ~1.5ms)
-        position <= x"7F";
+        position <= "01111111";
         report "Test Position 127 (approx 90 degres)";
         wait for 20 ms;
 
         -- Test Position 255 (180 degres, doit donner une impulsion de 2ms)
-        position <= x"FF";
+        position <= "11111111";
         report "Test Position 255 (180 degres)";
         wait for 20 ms;
 

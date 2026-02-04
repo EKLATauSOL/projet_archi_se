@@ -1,0 +1,177 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/alexa/Desktop/VHDL/projet_archi_se/Mini_Projet
+Eip_servo_avalon
+Z1 w1770133428
+Z2 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z3 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z4 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z5 8./peripherique/IP_Servo_Avalon.vhd
+Z6 F./peripherique/IP_Servo_Avalon.vhd
+l0
+L5
+VCG5V]O7f1=N=7ePcEjdAN0
+!s100 9<ZflY`HfA=LSQDYiL>oD1
+Z7 OV;C;10.5b;63
+32
+Z8 !s110 1770224258
+!i10b 1
+Z9 !s108 1770224258.000000
+Z10 !s90 -reportprogress|300|-work|work|./peripherique/IP_Servo_Avalon.vhd|
+Z11 !s107 ./peripherique/IP_Servo_Avalon.vhd|
+!i113 1
+Z12 o-work work
+Z13 tExplicit 1 CvgOpt 0
+Artl
+Z14 DEx4 work 11 servomoteur 0 22 RIfWcd@XN]kG[6g;b6aZ<0
+R2
+R3
+R4
+Z15 DEx4 work 15 ip_servo_avalon 0 22 CG5V]O7f1=N=7ePcEjdAN0
+l23
+L20
+VWabaXFI:NGmOjm<TaS`IS1
+!s100 ]W?jea0lCnIcbV@RSaQ7g0
+R7
+32
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 1
+R12
+R13
+Eservomoteur
+Z16 w1770142647
+R2
+R3
+R4
+R0
+Z17 8./peripherique/servomoteur.vhd
+Z18 F./peripherique/servomoteur.vhd
+l0
+L5
+VRIfWcd@XN]kG[6g;b6aZ<0
+!s100 6Ul:koBkL4[Xib;UDI3Zh2
+R7
+32
+R8
+!i10b 1
+R9
+Z19 !s90 -reportprogress|300|-work|work|./peripherique/servomoteur.vhd|
+Z20 !s107 ./peripherique/servomoteur.vhd|
+!i113 1
+R12
+R13
+Abhv
+R2
+R3
+R4
+R14
+l30
+L14
+VYBF_[]3YPzF32mhL@VD?=1
+!s100 Y:93IZd6A:@o2S_IOC5D_2
+R7
+32
+R8
+!i10b 1
+R9
+R19
+R20
+!i113 1
+R12
+R13
+Etb_ip_servo_avalon
+Z21 w1770224062
+R2
+R3
+R4
+R0
+Z22 8./peripherique/tb_IP_Servo_Avalon.vhd
+Z23 F./peripherique/tb_IP_Servo_Avalon.vhd
+l0
+L5
+VQ8EnT``JB<hiAg@[gVJK82
+!s100 kG=2XIce@ab`ZV@<2KIW[0
+R7
+32
+R8
+!i10b 1
+R9
+Z24 !s90 -reportprogress|300|-work|work|./peripherique/tb_IP_Servo_Avalon.vhd|
+Z25 !s107 ./peripherique/tb_IP_Servo_Avalon.vhd|
+!i113 1
+R12
+R13
+Atest
+R15
+R2
+R3
+R4
+DEx4 work 18 tb_ip_servo_avalon 0 22 Q8EnT``JB<hiAg@[gVJK82
+l18
+L8
+VJiPBXGMNj`Y]UBahdLYIa1
+!s100 kU=nicCO0XKj9YM:@J[2l2
+R7
+32
+R8
+!i10b 1
+R9
+R24
+R25
+!i113 1
+R12
+R13
+Etb_servomoteur
+Z26 w1770223455
+R2
+R3
+R4
+R0
+Z27 8./peripherique/tb_servomoteur.vhd
+Z28 F./peripherique/tb_servomoteur.vhd
+l0
+L5
+V9QKjR<LU=08cc?P;CBZ=d3
+!s100 OT?HbP7cl4g=oXcoR`03:1
+R7
+32
+Z29 !s110 1770223640
+!i10b 1
+Z30 !s108 1770223640.000000
+Z31 !s90 -reportprogress|300|-work|work|./peripherique/tb_servomoteur.vhd|
+Z32 !s107 ./peripherique/tb_servomoteur.vhd|
+!i113 1
+R12
+R13
+Atest
+R14
+R2
+R3
+R4
+DEx4 work 14 tb_servomoteur 0 22 9QKjR<LU=08cc?P;CBZ=d3
+l15
+L8
+VeZm2MG4S8:>:DfX06HSlZ2
+!s100 EDRfVDY<]7H5<YPCofM5n0
+R7
+32
+R29
+!i10b 1
+R30
+R31
+R32
+!i113 1
+R12
+R13
