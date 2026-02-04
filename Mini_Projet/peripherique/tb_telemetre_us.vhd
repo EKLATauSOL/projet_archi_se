@@ -57,38 +57,53 @@ begin
         
         wait for 100 ns;
 
-        -- Le module doit générer un Trigger automatiquement.
-        -- On attend le front montant du trigger.
+        -- =========================================================
+        -- MESURE 1 : 0 cm
+        -- =========================================================
         wait until rising_edge(trig);
-        report "Trigger detected!";
+        report "Trigger 1 détecté !";
         
-        -- Le capteur réel met un peu de temps avant de répondre (holdoff), par ex 200us
-        wait for 200 us;
+        wait for 200 us; 
         
-        -- Simulation d'un retour d'écho pour une distance de 10 cm.
-        -- Temps = 10 cm * 58 us/cm = 580 us.
-        report "Simulating Echo for 10 cm (580 us)";
+        -- Simulation Echo pour 0 cm (durée < 58us)
+        report "Simulation de l'Echo pour 0 cm (10 us)";
         echo <= '1';
-        wait for 580 us;
+        wait for 10 us; 
         echo <= '0';
 
-        wait for 1 ms;
-
-        -- Attendre le prochain cycle de trigger (cycle total de 60ms)
+        -- =========================================================
+        -- MESURE 2 : 20 cm
+        -- =========================================================
         wait until rising_edge(trig);
-        report "Second Trigger detected!";
+        report "Trigger 2 détecté !";
         
-         -- Simulation d'un retour d'écho pour une distance de 50 cm.
-        -- Temps = 50 cm * 58 us/cm = 2900 us = 2.9 ms
         wait for 200 us;
-        report "Simulating Echo for 50 cm (2.9 ms)";
+        
+        -- Simulation Echo pour 20 cm
+        report "Simulation de l'Echo pour 20 cm (1160 us)";
         echo <= '1';
-        wait for 2900 us;
+        wait for 1160 us; 
         echo <= '0';
 
-        wait for 10 ms;
+        -- =========================================================
+        -- MESURE 3 : 400 cm
+        -- =========================================================
+        wait until rising_edge(trig);
+        report "Trigger 3 détecté !";
+        
+        wait for 200 us;
 
-        assert false report "End of Simulation" severity failure;
+        -- Simulation Echo pour 400 cm
+        report "Simulation de l'Echo pour 400 cm (23.2 ms)";
+        echo <= '1';
+        wait for 23200 us; 
+        echo <= '0';
+
+        -- EXTENSION DE LA DUREE
+        report "Attente résultat final...";
+        wait for 100 ms; -- On attend largement assez pour voir le reset et la fin du cycle
+
+        assert false report "Fin de la Simulation" severity failure;
     end process;
 
 end architecture;

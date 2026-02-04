@@ -6,16 +6,12 @@ entity telemetre_us_avalon is
     port (
         clk         : in  std_logic;
         rst_n       : in  std_logic;
-        
-        -- Interface Avalon-MM Slave
         chipselect  : in  std_logic;
         read_n      : in  std_logic;
         readdata    : out std_logic_vector(31 downto 0);
-        
-        -- Interface Conduit (Vers l'extérieur)
         trig        : out std_logic;
         echo        : in  std_logic;
-        dist_export : out std_logic_vector(9 downto 0) -- Pour afficher sur les LEDs
+        dist_export : out std_logic_vector(9 downto 0) 
     );
 end entity;
 
@@ -35,7 +31,6 @@ architecture rtl of telemetre_us_avalon is
 
 begin
 
-    -- Instanciation du coeur du télémètre
     u0 : telemetre_us
         port map (
             clk     => clk,
@@ -45,17 +40,16 @@ begin
             dist_cm => dist_cm_sig
         );
         
-    -- Connexion de la sortie Conduit (pour les LEDs)
+    -- Connexion de la sortie Conduit
     dist_export <= dist_cm_sig;
 
     -- Gestion de la lecture Avalon
-    -- L'adresse n'est pas nécessaire car il n'y a qu'un seul registre à lire
     process(clk)
     begin
         if rising_edge(clk) then
             if chipselect = '1' and read_n = '0' then
-                readdata <= (others => '0');          -- Mise à zéro des bits de poids fort
-                readdata(9 downto 0) <= dist_cm_sig;  -- Assignation de la distance
+                readdata <= (others => '0');          
+                readdata(9 downto 0) <= dist_cm_sig;  
             end if;
         end if;
     end process;

@@ -69,7 +69,7 @@ int main() {
         for(int i=0; i<affichage_dist; i++) {
             printf("|");
         }
-        if (dist_cm > 80) printf("..."); // Indiquer si ça continue
+        if (dist_cm > 80) printf("..."); 
         printf("\n");
         update_display(dist_cm);
 

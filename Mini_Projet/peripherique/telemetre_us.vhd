@@ -25,8 +25,8 @@ architecture bhv of telemetre_us is
     signal cnt_echo        : integer range 0 to CNT_58US_MAX := 0;
     signal distance_buffer : unsigned(9 downto 0) := (others => '0');
     signal echo_sync       : std_logic;
-    signal dist_stable     : std_logic_vector(9 downto 0) := (others => '0');
     signal echo_prev       : std_logic;
+    signal dist_cm_reg     : std_logic_vector(9 downto 0) := (others => '0');
 
 begin
 
@@ -38,62 +38,56 @@ begin
             cnt_echo        <= 0;
             trig            <= '0';
             distance_buffer <= (others => '0');
-            dist_stable     <= (others => '0');
             echo_sync       <= '0';
             echo_prev       <= '0';
+            dist_cm_reg     <= (others => '0');
         elsif rising_edge(clk) then
-            -- 1. Synchronisation du signal echo (éviter métastabilité)
+            -- Synchronisation du signal echo
             echo_sync <= echo;
             echo_prev <= echo_sync;
 
-            -- 2. Gestion du Trigger et du cycle de 60ms
+            -- Gestion du Trigger et du cycle de 60ms
             if cnt_global < CNT_60MS_MAX then
                 cnt_global <= cnt_global + 1;
             else
                 cnt_global <= 0;
             end if;
 
-            -- Génération du pulse Trigger (10 µs au début du cycle)
+            -- Génération du pulse Trigger
             if cnt_global < CNT_10US_MAX then
                 trig <= '1';
             else
                 trig <= '0';
             end if;
 
-            -- 3. Mesure de la largeur d'impulsion de l'Echo
+            -- Mesure de la largeur d'impulsion de l'Echo
             if echo_sync = '1' then
                 if cnt_echo < CNT_58US_MAX then
                     cnt_echo <= cnt_echo + 1;
                 else
                     -- Chaque fois qu'on atteint 58µs, on incrémente la distance de 1cm
                     cnt_echo <= 0;
-                    if distance_buffer < 500 then -- Limite max raisonnable (500 cm)
+                    if distance_buffer < 400 then -- Limite max 400 cm
                         distance_buffer <= distance_buffer + 1;
                     end if;
                 end if;
             else
-                -- Si echo est bas, on remet le compteur partielle à 0
+                -- Si echo est bas, on remet le compteur à 0
                 cnt_echo <= 0;
+                
+                -- Detect Falling Edge of Echo to update output
+                if echo_prev = '1' and echo_sync = '0' then
+                    dist_cm_reg <= std_logic_vector(distance_buffer);
+                end if;
+                
                 -- On reset le buffer au début du prochain cycle de trigger pour une nouvelle mesure
-                -- Et on sauvegarde la VALEUR FINALE du cycle précédent
                 if cnt_global = 0 then
-                    if distance_buffer > 0 then -- Filtre simple : on évite d'afficher 0 si jamais raté (optionnel, mais mieux)
-                         dist_stable <= std_logic_vector(distance_buffer);
-                    elsif distance_buffer = 0 then
-                         -- Si on veut vraiment 0 quand y'a rien, on laisse passer. 
-                         -- Mais souvent 0 = erreur de lecture temporaire.
-                         -- Ici on laisse passer 0 pour être fidèle au capteur, ou on garde l'ancienne ?
-                         -- Le user dit "0 de temps en temps" -> jitter.
-                         -- On va juste latch la valeur brute. Le buffer ne sera reset qu'après.
-                         dist_stable <= std_logic_vector(distance_buffer);
-                    end if;
-                    
                     distance_buffer <= (others => '0');
                 end if;
             end if;
         end if;
     end process;
 
-    dist_cm <= dist_stable;
+    dist_cm <= dist_cm_reg;
 
 end architecture;

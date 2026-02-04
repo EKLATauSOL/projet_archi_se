@@ -127,3 +127,167 @@ R23
 R24
 !i113 1
 R12
+Etb_telemetre_us
+Z25 w1770224206
+R2
+R3
+R4
+Z26 dc:/users/eddy/Documents/esiea/5A/archi_se/mini_Projet/peripherique
+Z27 8tb_telemetre_us.vhd
+Z28 Ftb_telemetre_us.vhd
+l0
+L5
+VQ=P[>74?513UKj]YT6fN90
+!s100 P0]Sa=Sl;NSnFOlcVZTDO0
+R7
+31
+Z29 !s110 1770224254
+!i10b 1
+Z30 !s108 1770224254.000000
+Z31 !s90 -reportprogress|300|-93|tb_telemetre_us.vhd|
+Z32 !s107 tb_telemetre_us.vhd|
+!i113 1
+o-93
+R12
+Atest
+R2
+R3
+R4
+DEx4 work 15 tb_telemetre_us 0 22 Q=P[>74?513UKj]YT6fN90
+l29
+L8
+Vlb_FgenB<a[nRZ>OEnO?a0
+!s100 AS@@Xd<KjkC57QoXmg3jN2
+R7
+31
+R29
+!i10b 1
+R30
+R31
+R32
+!i113 1
+o-93
+R12
+Etb_telemetre_us_avalon
+Z33 w1770224484
+R2
+R3
+R4
+R26
+Z34 8tb_telemetre_us_avalon.vhd
+Z35 Ftb_telemetre_us_avalon.vhd
+l0
+L5
+VnNJ<^^mVnkGlmCnA`iQY23
+!s100 `fRbX<00B5Nh^[ZT?D8gH0
+R7
+31
+Z36 !s110 1770224532
+!i10b 1
+Z37 !s108 1770224532.000000
+Z38 !s90 -reportprogress|300|-93|tb_telemetre_us_avalon.vhd|
+Z39 !s107 tb_telemetre_us_avalon.vhd|
+!i113 1
+o-93
+R12
+Atest
+R2
+R3
+R4
+DEx4 work 22 tb_telemetre_us_avalon 0 22 nNJ<^^mVnkGlmCnA`iQY23
+l37
+L8
+VL^iEk0;PLj7G62MX:B<@Y0
+!s100 OCN1QBkeUWi>Ea69JH0eG1
+R7
+31
+R36
+!i10b 1
+R37
+R38
+R39
+!i113 1
+o-93
+R12
+Etelemetre_us
+Z40 w1770222866
+R2
+R3
+R4
+R26
+Z41 8telemetre_us.vhd
+Z42 Ftelemetre_us.vhd
+l0
+L5
+VEQ8]R?nZz:99m4DR>zcGO2
+!s100 U5NioZnJm2n=1ILBC>X:P1
+R7
+31
+Z43 !s110 1770224531
+!i10b 1
+Z44 !s108 1770224531.000000
+Z45 !s90 -reportprogress|300|-93|telemetre_us.vhd|
+Z46 !s107 telemetre_us.vhd|
+!i113 1
+o-93
+R12
+Abhv
+R2
+R3
+R4
+DEx4 work 12 telemetre_us 0 22 EQ8]R?nZz:99m4DR>zcGO2
+l31
+L15
+VOmg8N1`hD@H[ChVI_l4]f0
+!s100 KQnG=lfm>>R1DL3i3;G;>3
+R7
+31
+R43
+!i10b 1
+R44
+R45
+R46
+!i113 1
+o-93
+R12
+Etelemetre_us_avalon
+Z47 w1770111154
+R2
+R3
+R4
+R26
+Z48 8telemetre_us_avalon.vhd
+Z49 Ftelemetre_us_avalon.vhd
+l0
+L5
+VHDWL_]HjJHeZbWch^Q>IE0
+!s100 ^k[WS54dQ9OA?LMgjz[le1
+R7
+31
+R43
+!i10b 1
+R44
+Z50 !s90 -reportprogress|300|-93|telemetre_us_avalon.vhd|
+Z51 !s107 telemetre_us_avalon.vhd|
+!i113 1
+o-93
+R12
+Artl
+R2
+R3
+R4
+DEx4 work 19 telemetre_us_avalon 0 22 HDWL_]HjJHeZbWch^Q>IE0
+l36
+L22
+VL1EGkJUcgXC<UbIKkH]T93
+!s100 649UBC_I3>JN;YUIl47Hk2
+R7
+31
+R43
+!i10b 1
+R44
+R50
+R51
+!i113 1
+o-93
+R12
