@@ -25,6 +25,7 @@ architecture bhv of telemetre_us is
     signal cnt_echo        : integer range 0 to CNT_58US_MAX := 0;
     signal distance_buffer : unsigned(9 downto 0) := (others => '0');
     signal echo_sync       : std_logic;
+    signal dist_stable     : std_logic_vector(9 downto 0) := (others => '0');
     signal echo_prev       : std_logic;
 
 begin
@@ -37,6 +38,7 @@ begin
             cnt_echo        <= 0;
             trig            <= '0';
             distance_buffer <= (others => '0');
+            dist_stable     <= (others => '0');
             echo_sync       <= '0';
             echo_prev       <= '0';
         elsif rising_edge(clk) then
@@ -73,13 +75,25 @@ begin
                 -- Si echo est bas, on remet le compteur partielle à 0
                 cnt_echo <= 0;
                 -- On reset le buffer au début du prochain cycle de trigger pour une nouvelle mesure
+                -- Et on sauvegarde la VALEUR FINALE du cycle précédent
                 if cnt_global = 0 then
+                    if distance_buffer > 0 then -- Filtre simple : on évite d'afficher 0 si jamais raté (optionnel, mais mieux)
+                         dist_stable <= std_logic_vector(distance_buffer);
+                    elsif distance_buffer = 0 then
+                         -- Si on veut vraiment 0 quand y'a rien, on laisse passer. 
+                         -- Mais souvent 0 = erreur de lecture temporaire.
+                         -- Ici on laisse passer 0 pour être fidèle au capteur, ou on garde l'ancienne ?
+                         -- Le user dit "0 de temps en temps" -> jitter.
+                         -- On va juste latch la valeur brute. Le buffer ne sera reset qu'après.
+                         dist_stable <= std_logic_vector(distance_buffer);
+                    end if;
+                    
                     distance_buffer <= (others => '0');
                 end if;
             end if;
         end if;
     end process;
 
-    dist_cm <= std_logic_vector(distance_buffer);
+    dist_cm <= dist_stable;
 
 end architecture;

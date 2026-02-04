@@ -2,10 +2,10 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>3 févr. 2026 11:36:47</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1770115007383</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>4 févr. 2026 15:03:32</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1770213812434</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\Eddy\Documents\esiea\5A\archi_se\Mini_Projet\software\telemetre_soft_bsp</BspGeneratedLocation>
-        <BspSettingsFile>.\settings.bsp</BspSettingsFile>
+        <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\nios2_system.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>nios2_gen2_0</Cpu>

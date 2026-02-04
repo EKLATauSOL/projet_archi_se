@@ -142,7 +142,7 @@ ACDS_VERSION := 18.1
 ELF := telemetre_soft.elf
 
 # Paths to C, C++, and assembly source files.
-C_SRCS := hello_world_small.c
+C_SRCS := radar_2d.c
 CXX_SRCS :=
 ASM_SRCS :=
 
