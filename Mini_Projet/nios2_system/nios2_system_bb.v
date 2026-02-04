@@ -5,7 +5,7 @@ module nios2_system (
 	hex5_4_external_connection_export,
 	key_external_connection_export,
 	led_external_connection_export,
-	pwmled_writeresponsevalid_n,
+	pwmled_export,
 	reset_reset_n,
 	sw_external_connection_export,
 	telemetre_us_avalon_trig,
@@ -17,7 +17,7 @@ module nios2_system (
 	output	[15:0]	hex5_4_external_connection_export;
 	input	[1:0]	key_external_connection_export;
 	output	[9:0]	led_external_connection_export;
-	output		pwmled_writeresponsevalid_n;
+	output		pwmled_export;
 	input		reset_reset_n;
 	input	[9:0]	sw_external_connection_export;
 	output		telemetre_us_avalon_trig;

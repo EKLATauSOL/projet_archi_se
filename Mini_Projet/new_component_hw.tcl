@@ -130,5 +130,5 @@ set_interface_property conduit_end_1 PORT_NAME_MAP ""
 set_interface_property conduit_end_1 CMSIS_SVD_VARIABLES ""
 set_interface_property conduit_end_1 SVD_ADDRESS_GROUP ""
 
-add_interface_port conduit_end_1 pwm_out writeresponsevalid_n Output 1
+add_interface_port conduit_end_1 pwm_out export Output 1
 

@@ -24,7 +24,8 @@ architecture bhv of servomoteur is
     constant DUTY_STEP : integer := 353;
 
     signal counter    : integer range 0 to CNT_PERIOD_MAX := 0;
-    signal duty_cycle : integer range 0 to DUTY_MAX := 75000; -- 1.5 ms par défaut (90°)
+    signal duty_cycle : integer range 0 to CNT_PERIOD_MAX := 75000; -- 1.5 ms par défaut (90°)
+
 
 begin
 

@@ -1,0 +1,203 @@
+┌─────────────────────────────────────────────────────────────────┐
+│         SCHÉMA DE CONNEXION DU SERVOMOTEUR SUR DE10-LITE        │
+└─────────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────┐
+│  Alimentation Externe 5V │
+│  (Adaptateur secteur ou  │
+│   Pile 4×AA = 6V avec    │
+│   régulateur 5V)         │
+└───────┬──────────────────┘
+        │
+        ├─── VCC (+5V)
+        │
+        └─── GND (0V)
+                │
+                │
+    ┌───────────┴────────────────┐
+    │                            │
+    │                            │
+┌───▼────────────┐      ┌────────▼──────────┐
+│ Servomoteur    │      │   DE10-Lite       │
+│                │      │   FPGA            │
+│  ┌──────────┐  │      │                   │
+│  │  Moteur  │  │      │  ┌─────────────┐  │
+│  │    DC    │  │      │  │   MAX10     │  │
+│  └──────────┘  │      │  │    FPGA     │  │
+│                │      │  └─────────────┘  │
+│  Connecteur:   │      │                   │
+│  ┌──┬──┬──┐   │      │   GPIO Header     │
+│  │ │ │ │ │   │      │   (JP1)           │
+│  └──┴──┴──┘   │      │   ┌─┬─┬─┬─┬─┬─┐   │
+│   │  │  │     │      │   │ │ │ │ │ │ │   │
+└───┼──┼──┼─────┘      └───┼─┼─┼─┼─┼─┼───┘
+    │  │  │                 │ │ │ │ │ │
+    │  │  └─────────────────┘ │ │ │ │ │
+    │  │    Signal PWM        │ │ │ │ │
+    │  │    (Orange/Jaune)    │ │ │ │ │
+    │  │    GPIO[0]           │ │ │ │ │
+    │  │    PIN_V10           │ │ │ │ │
+    │  │                      │ │ │ │ │
+    │  └──────────────────────┼─┘ │ │ │
+    │         GND             │   │ │ │
+    │         (Marron/Noir)   │   │ │ │
+    │                         │   │ │ │
+    └─────────────────────────┼───┘ │ │
+              VCC             │     │ │
+              (Rouge)         │     │ │
+              +5V             │     │ │
+                              │     │ │
+              ⚠️ NE PAS UTILISER LE 3.3V DU FPGA !
+              Utiliser une alimentation externe 5V
+
+
+┌─────────────────────────────────────────────────────────────────┐
+│                    DÉTAIL DES CONNEXIONS                        │
+└─────────────────────────────────────────────────────────────────┘
+
+Servomoteur (3 fils) :
+  ┌─────────────┬──────────────┬─────────────────────────────────┐
+  │ Couleur     │ Signal       │ Connexion                       │
+  ├─────────────┼──────────────┼─────────────────────────────────┤
+  │ ROUGE       │ VCC (+5V)    │ Alimentation externe 5V         │
+  │ MARRON/NOIR │ GND (0V)     │ GND commun (FPGA + Alim)        │
+  │ ORANGE/JAUNE│ Signal PWM   │ GPIO[0] (PIN_V10) du FPGA       │
+  └─────────────┴──────────────┴─────────────────────────────────┘
+
+DE10-Lite GPIO Header (JP1) :
+  ┌─────┬──────────┬─────────────────────────────────────────────┐
+  │ Pin │ Signal   │ Connexion                                   │
+  ├─────┼──────────┼─────────────────────────────────────────────┤
+  │ 29  │ 5V       │ ⚠️ NE PAS UTILISER (courant insuffisant)    │
+  │ 11  │ 3.3V     │ ⚠️ NE PAS UTILISER (tension incorrecte)     │
+  │ 12  │ GND      │ ✅ Connecter au GND de l'alimentation       │
+  │ 1   │ GPIO[0]  │ ✅ Connecter au signal du servomoteur       │
+  └─────┴──────────┴─────────────────────────────────────────────┘
+
+
+┌─────────────────────────────────────────────────────────────────┐
+│                  CONFIGURATION DES SWITCHES                     │
+└─────────────────────────────────────────────────────────────────┘
+
+Carte DE10-Lite :
+  
+  SW[9] SW[8] SW[7] SW[6] SW[5] SW[4] SW[3] SW[2] SW[1] SW[0]
+    │     │     │     │     │     │     │     │     │     │
+    │     │     └─────┴─────┴─────┴─────┴─────┴─────┴─────┘
+    │     │              Position du servomoteur
+    │     │              (8 bits = 0 à 255)
+    │     │              
+    │     └─── Non utilisé pour le servomoteur
+    └───────── Non utilisé pour le servomoteur
+
+Exemples de positions :
+  ┌──────────────────┬─────────┬───────┬──────────────────┐
+  │ SW[7:0]          │ Décimal │ Angle │ Temps impulsion  │
+  ├──────────────────┼─────────┼───────┼──────────────────┤
+  │ 0 0 0 0 0 0 0 0  │    0    │   0°  │    0.6 ms        │
+  │ 0 0 1 1 1 1 1 1  │   63    │  45°  │    1.05 ms       │
+  │ 0 1 1 1 1 1 1 1  │  127    │  90°  │    1.5 ms        │
+  │ 1 0 1 1 1 1 1 1  │  191    │ 135°  │    1.95 ms       │
+  │ 1 1 1 1 1 1 1 1  │  255    │ 180°  │    2.4 ms        │
+  └──────────────────┴─────────┴───────┴──────────────────┘
+
+
+┌─────────────────────────────────────────────────────────────────┐
+│                     FEEDBACK VISUEL (LEDs)                      │
+└─────────────────────────────────────────────────────────────────┘
+
+  LEDR[9] LEDR[8] LEDR[7] LEDR[6] LEDR[5] LEDR[4] LEDR[3] LEDR[2] LEDR[1] LEDR[0]
+     │       │       │       │       │       │       │       │       │       │
+     │       │       │       │       │       │       │       │       │       │
+  SW[9]   SW[8]   SW[7]   SW[6]   SW[5]   SW[4]   SW[3]   SW[2]   SW[1]   SW[0]
+
+  Les LEDs reflètent directement l'état des switches
+  → Permet de vérifier que le FPGA est bien programmé
+
+
+┌─────────────────────────────────────────────────────────────────┐
+│                    BOUTON RESET (KEY[0])                        │
+└─────────────────────────────────────────────────────────────────┘
+
+  KEY[0] (PIN_B8) : Reset actif BAS
+  
+  ┌─────────────────┬──────────────────────────────────────────┐
+  │ État KEY[0]     │ Comportement                             │
+  ├─────────────────┼──────────────────────────────────────────┤
+  │ Relâché (1)     │ Fonctionnement normal                    │
+  │                 │ Position = SW[7:0]                       │
+  ├─────────────────┼──────────────────────────────────────────┤
+  │ Appuyé (0)      │ RESET actif                              │
+  │                 │ Position = 127 (90°, milieu)             │
+  └─────────────────┴──────────────────────────────────────────┘
+
+
+┌─────────────────────────────────────────────────────────────────┐
+│                  ⚠️  AVERTISSEMENTS IMPORTANTS                  │
+└─────────────────────────────────────────────────────────────────┘
+
+  ❌ NE JAMAIS alimenter le servomoteur depuis le FPGA
+     → Risque de dommage du FPGA par surconsommation
+     → Le servomoteur peut consommer jusqu'à 500mA
+     → Le FPGA ne peut fournir que ~50mA par pin
+
+  ❌ NE JAMAIS utiliser le 3.3V du FPGA pour le servomoteur
+     → Tension insuffisante (servomoteur = 5V)
+     → Comportement erratique garanti
+
+  ✅ TOUJOURS utiliser une alimentation externe 5V
+     → Adaptateur secteur 5V/1A minimum
+     → Pile 4×AA (6V) avec régulateur 5V
+     → Alimentation de laboratoire réglée à 5V
+
+  ✅ TOUJOURS connecter les masses ensemble
+     → GND FPGA ← → GND Alimentation externe
+     → Sinon le signal PWM n'aura pas de référence
+
+  ✅ VÉRIFIER la polarité avant de brancher
+     → Inversion = destruction du servomoteur
+
+
+┌─────────────────────────────────────────────────────────────────┐
+│                    SIGNAL PWM ATTENDU                           │
+└─────────────────────────────────────────────────────────────────┘
+
+  Période = 20 ms (50 Hz)
+  
+  Position 0° (SW = 00000000) :
+  ────┐     ┌─────────────────────────────────────────────
+      │0.6ms│
+      └─────┘
+      ◄────────────── 20 ms ──────────────►
+
+  Position 90° (SW = 01111111) :
+  ────┐         ┌───────────────────────────────────────
+      │  1.5ms  │
+      └─────────┘
+      ◄────────────── 20 ms ──────────────►
+
+  Position 180° (SW = 11111111) :
+  ────┐             ┌───────────────────────────────────
+      │   2.4ms     │
+      └─────────────┘
+      ◄────────────── 20 ms ──────────────►
+
+
+┌─────────────────────────────────────────────────────────────────┐
+│                  MESURE À L'OSCILLOSCOPE                        │
+└─────────────────────────────────────────────────────────────────┘
+
+  Sonde : GPIO[0] (PIN_V10)
+  GND   : GND commun
+  
+  Réglages oscilloscope :
+    - Échelle temps : 5 ms/div
+    - Échelle tension : 2 V/div
+    - Trigger : Front montant, 1.5V
+    - Couplage : DC
+  
+  Mesures à vérifier :
+    ✓ Période = 20 ms ± 0.1 ms
+    ✓ Amplitude = 3.3V (logique FPGA)
+    ✓ Largeur impulsion varie avec SW[7:0]
+    ✓ Pas de rebonds ou de glitches
