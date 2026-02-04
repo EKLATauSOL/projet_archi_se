@@ -6,6 +6,8 @@ c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-el
                               obj/default/radar_2d.o (__mulsi3)
 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
                               obj/default/radar_2d.o (printf)
+c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putchar.o)
+                              obj/default/radar_2d.o (putchar)
 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
                               obj/default/radar_2d.o (puts)
 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
@@ -16,6 +18,8 @@ c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-el
                               c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o) (__sfvwrite_small_dev)
 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
                               c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o) (_impure_ptr)
+c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putc.o)
+                              c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putchar.o) (_putc_r)
 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
                               c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o) (_write_r)
 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
@@ -105,7 +109,7 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
                 0x0000000000020020                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
                 0x0000000000020020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
 
-.text           0x0000000000020020      0xe50
+.text           0x0000000000020020      0xf80
                 [!provide]                        PROVIDE (stext, ABSOLUTE (.))
  *(.interp)
  *(.hash)
@@ -152,80 +156,91 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
  *(.text .stub .text.* .gnu.linkonce.t.*)
  .text          0x0000000000020020       0x3c ../telemetre_soft_bsp//obj/HAL/src/crt0.o
                 0x0000000000020020                _start
- .text          0x000000000002005c       0xf8 obj/default/radar_2d.o
+ .text          0x000000000002005c       0xf4 obj/default/radar_2d.o
                 0x000000000002005c                angle_to_cycles
-                0x0000000000020098                update_display
- .text.startup  0x0000000000020154       0xe4 obj/default/radar_2d.o
-                0x0000000000020154                main
- .text          0x0000000000020238      0x1b4 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
-                0x0000000000020238                __divsi3
-                0x00000000000202bc                __modsi3
-                0x0000000000020330                __udivsi3
-                0x0000000000020394                __umodsi3
- .text          0x00000000000203ec       0x28 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
-                0x00000000000203ec                __mulsi3
- .text          0x0000000000020414        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
+                0x0000000000020094                update_display
+ .text.startup  0x0000000000020150      0x148 obj/default/radar_2d.o
+                0x0000000000020150                main
+ .text          0x0000000000020298      0x1b4 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+                0x0000000000020298                __divsi3
+                0x000000000002031c                __modsi3
+                0x0000000000020390                __udivsi3
+                0x00000000000203f4                __umodsi3
+ .text          0x000000000002044c       0x28 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+                0x000000000002044c                __mulsi3
+ .text          0x0000000000020474        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
  .text._printf_r
-                0x0000000000020414       0x3c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
-                0x0000000000020414                _printf_r
- .text.printf   0x0000000000020450       0x4c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
-                0x0000000000020450                printf
- .text          0x000000000002049c        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
- .text._puts_r  0x000000000002049c       0x80 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
-                0x000000000002049c                _puts_r
- .text.puts     0x000000000002051c       0x14 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
-                0x000000000002051c                puts
- .text          0x0000000000020530        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .text.strlen   0x0000000000020530       0x1c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
-                0x0000000000020530                strlen
- .text          0x000000000002054c        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+                0x0000000000020474       0x3c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
+                0x0000000000020474                _printf_r
+ .text.printf   0x00000000000204b0       0x4c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
+                0x00000000000204b0                printf
+ .text          0x00000000000204fc        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putchar.o)
+ .text._putchar_r
+                0x00000000000204fc        0x8 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putchar.o)
+                0x00000000000204fc                _putchar_r
+ .text.putchar  0x0000000000020504       0x1c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putchar.o)
+                0x0000000000020504                putchar
+ .text          0x0000000000020520        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+ .text._puts_r  0x0000000000020520       0x80 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+                0x0000000000020520                _puts_r
+ .text.puts     0x00000000000205a0       0x14 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+                0x00000000000205a0                puts
+ .text          0x00000000000205b4        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .text.strlen   0x00000000000205b4       0x1c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+                0x00000000000205b4                strlen
+ .text          0x00000000000205d0        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
  .text.print_repeat
-                0x000000000002054c       0x6c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+                0x00000000000205d0       0x6c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
  .text.___vfprintf_internal_r
-                0x00000000000205b8      0x52c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
-                0x00000000000205b8                ___vfprintf_internal_r
+                0x000000000002063c      0x52c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+                0x000000000002063c                ___vfprintf_internal_r
  .text.__vfprintf_internal
-                0x0000000000020ae4       0x1c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
-                0x0000000000020ae4                __vfprintf_internal
- .text          0x0000000000020b00        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
+                0x0000000000020b68       0x1c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+                0x0000000000020b68                __vfprintf_internal
+ .text          0x0000000000020b84        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
  .text.__sfvwrite_small_dev
-                0x0000000000020b00       0xb8 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
-                0x0000000000020b00                __sfvwrite_small_dev
- .text          0x0000000000020bb8        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
- .text          0x0000000000020bb8        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
+                0x0000000000020b84       0xb8 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
+                0x0000000000020b84                __sfvwrite_small_dev
+ .text          0x0000000000020c3c        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .text          0x0000000000020c3c        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putc.o)
+ .text.putc     0x0000000000020c3c       0x54 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putc.o)
+                0x0000000000020c3c                putc
+ .text._putc_r  0x0000000000020c90       0x58 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putc.o)
+                0x0000000000020c90                _putc_r
+ .text          0x0000000000020ce8        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
  .text._write_r
-                0x0000000000020bb8       0x58 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
-                0x0000000000020bb8                _write_r
- .text          0x0000000000020c10        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
- .text          0x0000000000020c10       0xe0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_load.o)
-                0x0000000000020c10                alt_load
- .text          0x0000000000020cf0       0x2c ../telemetre_soft_bsp/\libhal_bsp.a(alt_main.o)
-                0x0000000000020cf0                alt_main
- .text          0x0000000000020d1c        0x4 ../telemetre_soft_bsp/\libhal_bsp.a(alt_usleep.o)
-                0x0000000000020d1c                usleep
- .text          0x0000000000020d20       0x60 ../telemetre_soft_bsp/\libhal_bsp.a(alt_write.o)
-                0x0000000000020d20                write
- .text          0x0000000000020d80       0x24 ../telemetre_soft_bsp/\libhal_bsp.a(alt_sys_init.o)
-                0x0000000000020d80                alt_irq_init
-                0x0000000000020da0                alt_sys_init
- .text          0x0000000000020da4       0x34 ../telemetre_soft_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
-                0x0000000000020da4                altera_avalon_jtag_uart_write
- .text          0x0000000000020dd8       0x88 ../telemetre_soft_bsp/\libhal_bsp.a(alt_busy_sleep.o)
-                0x0000000000020dd8                alt_busy_sleep
- .text          0x0000000000020e60        0x4 ../telemetre_soft_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
-                0x0000000000020e60                alt_dcache_flush_all
- .text          0x0000000000020e64        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_errno.o)
- .text          0x0000000000020e64        0x4 ../telemetre_soft_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
-                0x0000000000020e64                alt_icache_flush_all
- .text          0x0000000000020e68        0x8 ../telemetre_soft_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
-                0x0000000000020e68                altera_nios2_gen2_irq_init
+                0x0000000000020ce8       0x58 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
+                0x0000000000020ce8                _write_r
+ .text          0x0000000000020d40        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .text          0x0000000000020d40       0xe0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_load.o)
+                0x0000000000020d40                alt_load
+ .text          0x0000000000020e20       0x2c ../telemetre_soft_bsp/\libhal_bsp.a(alt_main.o)
+                0x0000000000020e20                alt_main
+ .text          0x0000000000020e4c        0x4 ../telemetre_soft_bsp/\libhal_bsp.a(alt_usleep.o)
+                0x0000000000020e4c                usleep
+ .text          0x0000000000020e50       0x60 ../telemetre_soft_bsp/\libhal_bsp.a(alt_write.o)
+                0x0000000000020e50                write
+ .text          0x0000000000020eb0       0x24 ../telemetre_soft_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x0000000000020eb0                alt_irq_init
+                0x0000000000020ed0                alt_sys_init
+ .text          0x0000000000020ed4       0x34 ../telemetre_soft_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                0x0000000000020ed4                altera_avalon_jtag_uart_write
+ .text          0x0000000000020f08       0x88 ../telemetre_soft_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+                0x0000000000020f08                alt_busy_sleep
+ .text          0x0000000000020f90        0x4 ../telemetre_soft_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                0x0000000000020f90                alt_dcache_flush_all
+ .text          0x0000000000020f94        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_errno.o)
+ .text          0x0000000000020f94        0x4 ../telemetre_soft_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                0x0000000000020f94                alt_icache_flush_all
+ .text          0x0000000000020f98        0x8 ../telemetre_soft_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x0000000000020f98                altera_nios2_gen2_irq_init
  *(.gnu.warning.*)
  *(.fini)
                 [!provide]                        PROVIDE (__etext, ABSOLUTE (.))
                 [!provide]                        PROVIDE (_etext, ABSOLUTE (.))
                 [!provide]                        PROVIDE (etext, ABSOLUTE (.))
  *(.eh_frame_hdr)
-                0x0000000000020e70                . = ALIGN (0x4)
+                0x0000000000020fa0                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__preinit_array_start, ABSOLUTE (.))
  *(.preinit_array)
                 [!provide]                        PROVIDE (__preinit_array_end, ABSOLUTE (.))
@@ -247,132 +262,136 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
  *(SORT(.dtors.*))
                 [!provide]                        PROVIDE (__DTOR_END__, ABSOLUTE (.))
  *(.jcr)
-                0x0000000000020e70                . = ALIGN (0x4)
+                0x0000000000020fa0                . = ALIGN (0x4)
 
-.rodata         0x0000000000020e70       0x94
-                0x0000000000020e70                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
-                0x0000000000020e70                . = ALIGN (0x4)
+.rodata         0x0000000000020fa0       0xc0
+                0x0000000000020fa0                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
+                0x0000000000020fa0                . = ALIGN (0x4)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.str1.4
-                0x0000000000020e70       0x89 obj/default/radar_2d.o
- .rodata        0x0000000000020ef9        0xa obj/default/radar_2d.o
-                0x0000000000020ef9                table_7seg
+                0x0000000000020fa0       0xb1 obj/default/radar_2d.o
+ .rodata        0x0000000000021051        0xa obj/default/radar_2d.o
+                0x0000000000021051                table_7seg
+ *fill*         0x000000000002105b        0x1 
  .rodata.str1.4
-                0x0000000000020f03       0x8c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+                0x000000000002105c        0x4 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
                                           0x2 (size before relaxing)
  *(.rodata1)
-                0x0000000000020f90                . = ALIGN (0x4)
- *fill*         0x0000000000020f03        0x1 
-                0x0000000000020f04                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
-                0x0000000000020e70                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
+                0x0000000000021060                . = ALIGN (0x4)
+                0x0000000000021060                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
+                0x0000000000020fa0                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
 
-.rwdata         0x0000000000020f04       0xf0 load address 0x0000000000020ff4
-                0x0000000000020f04                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
-                0x0000000000020f04                . = ALIGN (0x4)
+.rwdata         0x0000000000021060       0xf0 load address 0x0000000000021150
+                0x0000000000021060                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
+                0x0000000000021060                . = ALIGN (0x4)
  *(.got.plt)
  *(.got)
  *(.data1)
  *(.data .data.* .gnu.linkonce.d.*)
- .data          0x0000000000020f04        0x0 ../telemetre_soft_bsp//obj/HAL/src/crt0.o
- .data          0x0000000000020f04        0x0 obj/default/radar_2d.o
- .data          0x0000000000020f04        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
- .data          0x0000000000020f04        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
- .data          0x0000000000020f04        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
- .data          0x0000000000020f04        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
- .data          0x0000000000020f04        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .data          0x0000000000020f04        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
- .data          0x0000000000020f04        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
- .data          0x0000000000020f04        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .data          0x0000000000021060        0x0 ../telemetre_soft_bsp//obj/HAL/src/crt0.o
+ .data          0x0000000000021060        0x0 obj/default/radar_2d.o
+ .data          0x0000000000021060        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .data          0x0000000000021060        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .data          0x0000000000021060        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
+ .data          0x0000000000021060        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putchar.o)
+ .data          0x0000000000021060        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+ .data          0x0000000000021060        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .data          0x0000000000021060        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+ .data          0x0000000000021060        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
+ .data          0x0000000000021060        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
  .data.impure_data
-                0x0000000000020f04       0xe0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
- .data          0x0000000000020fe4        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
- .data          0x0000000000020fe4        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
- .data          0x0000000000020fe4        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_load.o)
- .data          0x0000000000020fe4        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_main.o)
- .data          0x0000000000020fe4        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_usleep.o)
- .data          0x0000000000020fe4        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_write.o)
- .data          0x0000000000020fe4        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_sys_init.o)
- .data          0x0000000000020fe4        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .data          0x0000000000020fe4        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_busy_sleep.o)
- .data          0x0000000000020fe4        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .data          0x0000000000020fe4        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_errno.o)
- .data          0x0000000000020fe4        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .data          0x0000000000020fe4        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
-                0x0000000000028fe4                _gp = ABSOLUTE ((. + 0x8000))
+                0x0000000000021060       0xe0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .data          0x0000000000021140        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putc.o)
+ .data          0x0000000000021140        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
+ .data          0x0000000000021140        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .data          0x0000000000021140        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_load.o)
+ .data          0x0000000000021140        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_main.o)
+ .data          0x0000000000021140        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_usleep.o)
+ .data          0x0000000000021140        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_write.o)
+ .data          0x0000000000021140        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .data          0x0000000000021140        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .data          0x0000000000021140        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .data          0x0000000000021140        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x0000000000021140        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_errno.o)
+ .data          0x0000000000021140        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x0000000000021140        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x0000000000029140                _gp = ABSOLUTE ((. + 0x8000))
                 [!provide]                        PROVIDE (gp, _gp)
  *(.rwdata .rwdata.*)
  *(.sdata .sdata.* .gnu.linkonce.s.*)
  .sdata._global_impure_ptr
-                0x0000000000020fe4        0x4 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
-                0x0000000000020fe4                _global_impure_ptr
+                0x0000000000021140        0x4 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+                0x0000000000021140                _global_impure_ptr
  .sdata._impure_ptr
-                0x0000000000020fe8        0x4 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
-                0x0000000000020fe8                _impure_ptr
- .sdata         0x0000000000020fec        0x4 ../telemetre_soft_bsp/\libhal_bsp.a(alt_sys_init.o)
-                0x0000000000020fec                jtag_uart_0
- .sdata         0x0000000000020ff0        0x4 ../telemetre_soft_bsp/\libhal_bsp.a(alt_errno.o)
-                0x0000000000020ff0                alt_errno
+                0x0000000000021144        0x4 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+                0x0000000000021144                _impure_ptr
+ .sdata         0x0000000000021148        0x4 ../telemetre_soft_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x0000000000021148                jtag_uart_0
+ .sdata         0x000000000002114c        0x4 ../telemetre_soft_bsp/\libhal_bsp.a(alt_errno.o)
+                0x000000000002114c                alt_errno
  *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
-                0x0000000000020ff4                . = ALIGN (0x4)
-                0x0000000000020ff4                _edata = ABSOLUTE (.)
+                0x0000000000021150                . = ALIGN (0x4)
+                0x0000000000021150                _edata = ABSOLUTE (.)
                 [!provide]                        PROVIDE (edata, ABSOLUTE (.))
-                0x0000000000020ff4                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
-                0x0000000000020ff4                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
+                0x0000000000021150                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
+                0x0000000000021150                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
 
-.bss            0x00000000000210e4       0x10
-                0x00000000000210e4                __bss_start = ABSOLUTE (.)
+.bss            0x0000000000021240       0x10
+                0x0000000000021240                __bss_start = ABSOLUTE (.)
                 [!provide]                        PROVIDE (__sbss_start, ABSOLUTE (.))
                 [!provide]                        PROVIDE (___sbss_start, ABSOLUTE (.))
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
- .sbss          0x00000000000210e4        0x4 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
-                0x00000000000210e4                errno
- .sbss          0x00000000000210e8        0xc ../telemetre_soft_bsp/\libhal_bsp.a(alt_main.o)
-                0x00000000000210e8                alt_envp
-                0x00000000000210ec                alt_argv
-                0x00000000000210f0                alt_argc
+ .sbss          0x0000000000021240        0x4 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+                0x0000000000021240                errno
+ .sbss          0x0000000000021244        0xc ../telemetre_soft_bsp/\libhal_bsp.a(alt_main.o)
+                0x0000000000021244                alt_envp
+                0x0000000000021248                alt_argv
+                0x000000000002124c                alt_argc
  *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
  *(.scommon)
                 [!provide]                        PROVIDE (__sbss_end, ABSOLUTE (.))
                 [!provide]                        PROVIDE (___sbss_end, ABSOLUTE (.))
  *(.dynbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x00000000000210f4        0x0 ../telemetre_soft_bsp//obj/HAL/src/crt0.o
- .bss           0x00000000000210f4        0x0 obj/default/radar_2d.o
- .bss           0x00000000000210f4        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
- .bss           0x00000000000210f4        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
- .bss           0x00000000000210f4        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
- .bss           0x00000000000210f4        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
- .bss           0x00000000000210f4        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .bss           0x00000000000210f4        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
- .bss           0x00000000000210f4        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
- .bss           0x00000000000210f4        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
- .bss           0x00000000000210f4        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
- .bss           0x00000000000210f4        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
- .bss           0x00000000000210f4        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_load.o)
- .bss           0x00000000000210f4        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_main.o)
- .bss           0x00000000000210f4        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_usleep.o)
- .bss           0x00000000000210f4        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_write.o)
- .bss           0x00000000000210f4        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_sys_init.o)
- .bss           0x00000000000210f4        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .bss           0x00000000000210f4        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_busy_sleep.o)
- .bss           0x00000000000210f4        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .bss           0x00000000000210f4        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_errno.o)
- .bss           0x00000000000210f4        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .bss           0x00000000000210f4        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .bss           0x0000000000021250        0x0 ../telemetre_soft_bsp//obj/HAL/src/crt0.o
+ .bss           0x0000000000021250        0x0 obj/default/radar_2d.o
+ .bss           0x0000000000021250        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .bss           0x0000000000021250        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .bss           0x0000000000021250        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
+ .bss           0x0000000000021250        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putchar.o)
+ .bss           0x0000000000021250        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+ .bss           0x0000000000021250        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .bss           0x0000000000021250        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+ .bss           0x0000000000021250        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
+ .bss           0x0000000000021250        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .bss           0x0000000000021250        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putc.o)
+ .bss           0x0000000000021250        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
+ .bss           0x0000000000021250        0x0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .bss           0x0000000000021250        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_load.o)
+ .bss           0x0000000000021250        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_main.o)
+ .bss           0x0000000000021250        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_usleep.o)
+ .bss           0x0000000000021250        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_write.o)
+ .bss           0x0000000000021250        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .bss           0x0000000000021250        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .bss           0x0000000000021250        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .bss           0x0000000000021250        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x0000000000021250        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_errno.o)
+ .bss           0x0000000000021250        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x0000000000021250        0x0 ../telemetre_soft_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
  *(COMMON)
-                0x00000000000210f4                . = ALIGN (0x4)
-                0x00000000000210f4                __bss_end = ABSOLUTE (.)
+                0x0000000000021250                . = ALIGN (0x4)
+                0x0000000000021250                __bss_end = ABSOLUTE (.)
 
 .onchip_memory2_0
-                0x00000000000210f4        0x0
+                0x0000000000021250        0x0
                 [!provide]                        PROVIDE (_alt_partition_onchip_memory2_0_start, ABSOLUTE (.))
  *(.onchip_memory2_0 .onchip_memory2_0. onchip_memory2_0.*)
-                0x00000000000210f4                . = ALIGN (0x4)
+                0x0000000000021250                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_alt_partition_onchip_memory2_0_end, ABSOLUTE (.))
-                0x00000000000210f4                _end = ABSOLUTE (.)
-                0x00000000000210f4                end = ABSOLUTE (.)
-                0x00000000000210f4                __alt_stack_base = ABSOLUTE (.)
+                0x0000000000021250                _end = ABSOLUTE (.)
+                0x0000000000021250                end = ABSOLUTE (.)
+                0x0000000000021250                __alt_stack_base = ABSOLUTE (.)
                 [!provide]                        PROVIDE (_alt_partition_onchip_memory2_0_load_addr, LOADADDR (.onchip_memory2_0))
 
 .stab
@@ -400,11 +419,13 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
  .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
  .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
  .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putchar.o)
  .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
  .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
  .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
  .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
  .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putc.o)
  .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
  .comment       0x0000000000000023       0x24 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
  .comment       0x0000000000000023       0x24 ../telemetre_soft_bsp/\libhal_bsp.a(alt_load.o)
@@ -431,7 +452,7 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x0000000000000000      0x2f8
+.debug_aranges  0x0000000000000000      0x348
  *(.debug_aranges)
  .debug_aranges
                 0x0000000000000000       0x28 ../telemetre_soft_bsp//obj/HAL/src/crt0.o
@@ -444,208 +465,226 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
  .debug_aranges
                 0x0000000000000090       0x28 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
  .debug_aranges
-                0x00000000000000b8       0x28 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+                0x00000000000000b8       0x28 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putchar.o)
  .debug_aranges
-                0x00000000000000e0       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+                0x00000000000000e0       0x28 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
  .debug_aranges
-                0x0000000000000100       0x30 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+                0x0000000000000108       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
  .debug_aranges
-                0x0000000000000130       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
+                0x0000000000000128       0x30 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
  .debug_aranges
-                0x0000000000000150       0x18 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+                0x0000000000000158       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
  .debug_aranges
-                0x0000000000000168       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
+                0x0000000000000178       0x18 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
  .debug_aranges
-                0x0000000000000188       0x18 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+                0x0000000000000190       0x28 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putc.o)
  .debug_aranges
-                0x00000000000001a0       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(alt_load.o)
+                0x00000000000001b8       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
  .debug_aranges
-                0x00000000000001c0       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(alt_main.o)
+                0x00000000000001d8       0x18 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
  .debug_aranges
-                0x00000000000001e0       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(alt_usleep.o)
+                0x00000000000001f0       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(alt_load.o)
  .debug_aranges
-                0x0000000000000200       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(alt_write.o)
+                0x0000000000000210       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(alt_main.o)
  .debug_aranges
-                0x0000000000000220       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(alt_sys_init.o)
+                0x0000000000000230       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(alt_usleep.o)
  .debug_aranges
-                0x0000000000000240       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                0x0000000000000250       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(alt_write.o)
  .debug_aranges
-                0x0000000000000260       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+                0x0000000000000270       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(alt_sys_init.o)
  .debug_aranges
-                0x0000000000000280       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+                0x0000000000000290       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
  .debug_aranges
-                0x00000000000002a0       0x18 ../telemetre_soft_bsp/\libhal_bsp.a(alt_errno.o)
+                0x00000000000002b0       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(alt_busy_sleep.o)
  .debug_aranges
-                0x00000000000002b8       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+                0x00000000000002d0       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
  .debug_aranges
-                0x00000000000002d8       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x00000000000002f0       0x18 ../telemetre_soft_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_aranges
+                0x0000000000000308       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_aranges
+                0x0000000000000328       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000     0x3e27
+.debug_info     0x0000000000000000     0x4b64
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x0000000000000000       0x86 ../telemetre_soft_bsp//obj/HAL/src/crt0.o
- .debug_info    0x0000000000000086      0x26d obj/default/radar_2d.o
- .debug_info    0x00000000000002f3      0x2c6 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
- .debug_info    0x00000000000005b9       0xb4 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
- .debug_info    0x000000000000066d      0x699 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
- .debug_info    0x0000000000000d06      0x66d c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
- .debug_info    0x0000000000001373       0xc9 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .debug_info    0x000000000000143c      0xb2b c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
- .debug_info    0x0000000000001f67      0x62b c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
- .debug_info    0x0000000000002592      0x5a9 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
- .debug_info    0x0000000000002b3b      0x630 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
- .debug_info    0x000000000000316b       0x8a c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
- .debug_info    0x00000000000031f5      0x1c9 ../telemetre_soft_bsp/\libhal_bsp.a(alt_load.o)
- .debug_info    0x00000000000033be      0x169 ../telemetre_soft_bsp/\libhal_bsp.a(alt_main.o)
- .debug_info    0x0000000000003527       0xd1 ../telemetre_soft_bsp/\libhal_bsp.a(alt_usleep.o)
- .debug_info    0x00000000000035f8      0x1c7 ../telemetre_soft_bsp/\libhal_bsp.a(alt_write.o)
- .debug_info    0x00000000000037bf      0x19d ../telemetre_soft_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_info    0x000000000000395c      0x197 ../telemetre_soft_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .debug_info    0x0000000000003af3       0xd8 ../telemetre_soft_bsp/\libhal_bsp.a(alt_busy_sleep.o)
- .debug_info    0x0000000000003bcb       0x92 ../telemetre_soft_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_info    0x0000000000003c5d       0xa6 ../telemetre_soft_bsp/\libhal_bsp.a(alt_errno.o)
- .debug_info    0x0000000000003d03       0x92 ../telemetre_soft_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_info    0x0000000000003d95       0x92 ../telemetre_soft_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_info    0x0000000000000086      0x30e obj/default/radar_2d.o
+ .debug_info    0x0000000000000394      0x2c6 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_info    0x000000000000065a       0xb4 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_info    0x000000000000070e      0x699 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
+ .debug_info    0x0000000000000da7      0x62a c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putchar.o)
+ .debug_info    0x00000000000013d1      0x66d c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+ .debug_info    0x0000000000001a3e       0xc9 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_info    0x0000000000001b07      0xb2b c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+ .debug_info    0x0000000000002632      0x62b c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
+ .debug_info    0x0000000000002c5d      0x5a9 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .debug_info    0x0000000000003206      0x672 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putc.o)
+ .debug_info    0x0000000000003878      0x630 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
+ .debug_info    0x0000000000003ea8       0x8a c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .debug_info    0x0000000000003f32      0x1c9 ../telemetre_soft_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_info    0x00000000000040fb      0x169 ../telemetre_soft_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_info    0x0000000000004264       0xd1 ../telemetre_soft_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_info    0x0000000000004335      0x1c7 ../telemetre_soft_bsp/\libhal_bsp.a(alt_write.o)
+ .debug_info    0x00000000000044fc      0x19d ../telemetre_soft_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_info    0x0000000000004699      0x197 ../telemetre_soft_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_info    0x0000000000004830       0xd8 ../telemetre_soft_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_info    0x0000000000004908       0x92 ../telemetre_soft_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_info    0x000000000000499a       0xa6 ../telemetre_soft_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_info    0x0000000000004a40       0x92 ../telemetre_soft_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_info    0x0000000000004ad2       0x92 ../telemetre_soft_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
 
-.debug_abbrev   0x0000000000000000     0x15b5
+.debug_abbrev   0x0000000000000000     0x193f
  *(.debug_abbrev)
  .debug_abbrev  0x0000000000000000       0x12 ../telemetre_soft_bsp//obj/HAL/src/crt0.o
- .debug_abbrev  0x0000000000000012      0x14e obj/default/radar_2d.o
- .debug_abbrev  0x0000000000000160      0x10e c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
- .debug_abbrev  0x000000000000026e       0x6f c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
- .debug_abbrev  0x00000000000002dd      0x1ee c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
- .debug_abbrev  0x00000000000004cb      0x1d6 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
- .debug_abbrev  0x00000000000006a1       0x7f c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .debug_abbrev  0x0000000000000720      0x2a1 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
- .debug_abbrev  0x00000000000009c1      0x1bc c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
- .debug_abbrev  0x0000000000000b7d      0x14a c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
- .debug_abbrev  0x0000000000000cc7      0x1a6 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
- .debug_abbrev  0x0000000000000e6d       0x37 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
- .debug_abbrev  0x0000000000000ea4       0xd8 ../telemetre_soft_bsp/\libhal_bsp.a(alt_load.o)
- .debug_abbrev  0x0000000000000f7c       0xee ../telemetre_soft_bsp/\libhal_bsp.a(alt_main.o)
- .debug_abbrev  0x000000000000106a       0x8d ../telemetre_soft_bsp/\libhal_bsp.a(alt_usleep.o)
- .debug_abbrev  0x00000000000010f7      0x12e ../telemetre_soft_bsp/\libhal_bsp.a(alt_write.o)
- .debug_abbrev  0x0000000000001225      0x10e ../telemetre_soft_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_abbrev  0x0000000000001333       0xd5 ../telemetre_soft_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .debug_abbrev  0x0000000000001408       0x8d ../telemetre_soft_bsp/\libhal_bsp.a(alt_busy_sleep.o)
- .debug_abbrev  0x0000000000001495       0x42 ../telemetre_soft_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_abbrev  0x00000000000014d7       0x5a ../telemetre_soft_bsp/\libhal_bsp.a(alt_errno.o)
- .debug_abbrev  0x0000000000001531       0x42 ../telemetre_soft_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_abbrev  0x0000000000001573       0x42 ../telemetre_soft_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_abbrev  0x0000000000000012      0x15b obj/default/radar_2d.o
+ .debug_abbrev  0x000000000000016d      0x10e c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_abbrev  0x000000000000027b       0x6f c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_abbrev  0x00000000000002ea      0x1ee c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
+ .debug_abbrev  0x00000000000004d8      0x1c0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putchar.o)
+ .debug_abbrev  0x0000000000000698      0x1d6 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+ .debug_abbrev  0x000000000000086e       0x7f c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_abbrev  0x00000000000008ed      0x2a1 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+ .debug_abbrev  0x0000000000000b8e      0x1bc c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
+ .debug_abbrev  0x0000000000000d4a      0x14a c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .debug_abbrev  0x0000000000000e94      0x1bd c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putc.o)
+ .debug_abbrev  0x0000000000001051      0x1a6 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
+ .debug_abbrev  0x00000000000011f7       0x37 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .debug_abbrev  0x000000000000122e       0xd8 ../telemetre_soft_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_abbrev  0x0000000000001306       0xee ../telemetre_soft_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_abbrev  0x00000000000013f4       0x8d ../telemetre_soft_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_abbrev  0x0000000000001481      0x12e ../telemetre_soft_bsp/\libhal_bsp.a(alt_write.o)
+ .debug_abbrev  0x00000000000015af      0x10e ../telemetre_soft_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_abbrev  0x00000000000016bd       0xd5 ../telemetre_soft_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_abbrev  0x0000000000001792       0x8d ../telemetre_soft_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_abbrev  0x000000000000181f       0x42 ../telemetre_soft_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_abbrev  0x0000000000001861       0x5a ../telemetre_soft_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_abbrev  0x00000000000018bb       0x42 ../telemetre_soft_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_abbrev  0x00000000000018fd       0x42 ../telemetre_soft_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
 
-.debug_line     0x0000000000000000     0x1939
+.debug_line     0x0000000000000000     0x1d43
  *(.debug_line)
  .debug_line    0x0000000000000000       0x66 ../telemetre_soft_bsp//obj/HAL/src/crt0.o
- .debug_line    0x0000000000000066      0x170 obj/default/radar_2d.o
- .debug_line    0x00000000000001d6      0x105 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
- .debug_line    0x00000000000002db       0x80 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
- .debug_line    0x000000000000035b      0x203 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
- .debug_line    0x000000000000055e      0x206 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
- .debug_line    0x0000000000000764      0x15c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .debug_line    0x00000000000008c0      0x351 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
- .debug_line    0x0000000000000c11      0x1f0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
- .debug_line    0x0000000000000e01      0x156 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
- .debug_line    0x0000000000000f57      0x1ed c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
- .debug_line    0x0000000000001144       0x5f c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
- .debug_line    0x00000000000011a3       0xa4 ../telemetre_soft_bsp/\libhal_bsp.a(alt_load.o)
- .debug_line    0x0000000000001247       0xbd ../telemetre_soft_bsp/\libhal_bsp.a(alt_main.o)
- .debug_line    0x0000000000001304       0xcf ../telemetre_soft_bsp/\libhal_bsp.a(alt_usleep.o)
- .debug_line    0x00000000000013d3      0x16a ../telemetre_soft_bsp/\libhal_bsp.a(alt_write.o)
- .debug_line    0x000000000000153d      0x11a ../telemetre_soft_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_line    0x0000000000001657       0xf0 ../telemetre_soft_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .debug_line    0x0000000000001747       0xb5 ../telemetre_soft_bsp/\libhal_bsp.a(alt_busy_sleep.o)
- .debug_line    0x00000000000017fc       0x4e ../telemetre_soft_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_line    0x000000000000184a       0x51 ../telemetre_soft_bsp/\libhal_bsp.a(alt_errno.o)
- .debug_line    0x000000000000189b       0x4e ../telemetre_soft_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_line    0x00000000000018e9       0x50 ../telemetre_soft_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_line    0x0000000000000066      0x18f obj/default/radar_2d.o
+ .debug_line    0x00000000000001f5      0x105 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_line    0x00000000000002fa       0x80 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_line    0x000000000000037a      0x203 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
+ .debug_line    0x000000000000057d      0x1e9 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putchar.o)
+ .debug_line    0x0000000000000766      0x206 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+ .debug_line    0x000000000000096c      0x15c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_line    0x0000000000000ac8      0x351 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+ .debug_line    0x0000000000000e19      0x1f0 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
+ .debug_line    0x0000000000001009      0x156 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .debug_line    0x000000000000115f      0x202 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putc.o)
+ .debug_line    0x0000000000001361      0x1ed c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
+ .debug_line    0x000000000000154e       0x5f c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .debug_line    0x00000000000015ad       0xa4 ../telemetre_soft_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_line    0x0000000000001651       0xbd ../telemetre_soft_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_line    0x000000000000170e       0xcf ../telemetre_soft_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_line    0x00000000000017dd      0x16a ../telemetre_soft_bsp/\libhal_bsp.a(alt_write.o)
+ .debug_line    0x0000000000001947      0x11a ../telemetre_soft_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_line    0x0000000000001a61       0xf0 ../telemetre_soft_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_line    0x0000000000001b51       0xb5 ../telemetre_soft_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_line    0x0000000000001c06       0x4e ../telemetre_soft_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_line    0x0000000000001c54       0x51 ../telemetre_soft_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_line    0x0000000000001ca5       0x4e ../telemetre_soft_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_line    0x0000000000001cf3       0x50 ../telemetre_soft_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
 
-.debug_frame    0x0000000000000000      0x444
+.debug_frame    0x0000000000000000      0x4cc
  *(.debug_frame)
- .debug_frame   0x0000000000000000       0x74 obj/default/radar_2d.o
- .debug_frame   0x0000000000000074       0x50 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
- .debug_frame   0x00000000000000c4       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
- .debug_frame   0x00000000000000e4       0x48 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
- .debug_frame   0x000000000000012c       0x48 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
- .debug_frame   0x0000000000000174       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .debug_frame   0x0000000000000194       0x8c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
- .debug_frame   0x0000000000000220       0x58 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
- .debug_frame   0x0000000000000278       0x38 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
- .debug_frame   0x00000000000002b0       0x30 ../telemetre_soft_bsp/\libhal_bsp.a(alt_load.o)
- .debug_frame   0x00000000000002e0       0x2c ../telemetre_soft_bsp/\libhal_bsp.a(alt_main.o)
- .debug_frame   0x000000000000030c       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(alt_usleep.o)
- .debug_frame   0x000000000000032c       0x2c ../telemetre_soft_bsp/\libhal_bsp.a(alt_write.o)
- .debug_frame   0x0000000000000358       0x3c ../telemetre_soft_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_frame   0x0000000000000394       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .debug_frame   0x00000000000003b4       0x30 ../telemetre_soft_bsp/\libhal_bsp.a(alt_busy_sleep.o)
- .debug_frame   0x00000000000003e4       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
- .debug_frame   0x0000000000000404       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
- .debug_frame   0x0000000000000424       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_frame   0x0000000000000000       0x7c obj/default/radar_2d.o
+ .debug_frame   0x000000000000007c       0x50 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_frame   0x00000000000000cc       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_frame   0x00000000000000ec       0x48 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
+ .debug_frame   0x0000000000000134       0x30 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putchar.o)
+ .debug_frame   0x0000000000000164       0x48 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+ .debug_frame   0x00000000000001ac       0x20 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_frame   0x00000000000001cc       0x8c c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+ .debug_frame   0x0000000000000258       0x58 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
+ .debug_frame   0x00000000000002b0       0x50 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putc.o)
+ .debug_frame   0x0000000000000300       0x38 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
+ .debug_frame   0x0000000000000338       0x30 ../telemetre_soft_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_frame   0x0000000000000368       0x2c ../telemetre_soft_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_frame   0x0000000000000394       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_frame   0x00000000000003b4       0x2c ../telemetre_soft_bsp/\libhal_bsp.a(alt_write.o)
+ .debug_frame   0x00000000000003e0       0x3c ../telemetre_soft_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_frame   0x000000000000041c       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_frame   0x000000000000043c       0x30 ../telemetre_soft_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_frame   0x000000000000046c       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_frame   0x000000000000048c       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_frame   0x00000000000004ac       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
 
-.debug_str      0x0000000000000000     0x108c
+.debug_str      0x0000000000000000     0x1143
  *(.debug_str)
- .debug_str     0x0000000000000000      0x170 obj/default/radar_2d.o
-                                        0x1ba (size before relaxing)
- .debug_str     0x0000000000000170      0x187 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_str     0x0000000000000000      0x191 obj/default/radar_2d.o
+                                        0x1e3 (size before relaxing)
+ .debug_str     0x0000000000000191      0x187 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
                                         0x1d2 (size before relaxing)
- .debug_str     0x00000000000002f7       0x40 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_str     0x0000000000000318       0x40 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
                                         0x193 (size before relaxing)
- .debug_str     0x0000000000000337      0x431 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
+ .debug_str     0x0000000000000358      0x431 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
                                         0x504 (size before relaxing)
- .debug_str     0x0000000000000768       0x5e c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+ .debug_str     0x0000000000000789       0x50 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putchar.o)
+                                        0x4c1 (size before relaxing)
+ .debug_str     0x00000000000007d9       0x5e c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
                                         0x4cd (size before relaxing)
- .debug_str     0x00000000000007c6       0xd2 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_str     0x0000000000000837       0xd2 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
                                         0x1e5 (size before relaxing)
- .debug_str     0x0000000000000898      0x1f8 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+ .debug_str     0x0000000000000909      0x1f8 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
                                         0x67f (size before relaxing)
- .debug_str     0x0000000000000a90       0x63 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
+ .debug_str     0x0000000000000b01       0x63 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
                                         0x4d4 (size before relaxing)
- .debug_str     0x0000000000000af3       0xef c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
+ .debug_str     0x0000000000000b64       0xef c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-impure.o)
                                         0x4be (size before relaxing)
- .debug_str     0x0000000000000be2       0x45 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
+ .debug_str     0x0000000000000c53       0x46 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putc.o)
+                                        0x4cb (size before relaxing)
+ .debug_str     0x0000000000000c99       0x45 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
                                         0x4b8 (size before relaxing)
- .debug_str     0x0000000000000c27       0x3f c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
+ .debug_str     0x0000000000000cde       0x3f c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-int_errno.o)
                                         0x1d8 (size before relaxing)
- .debug_str     0x0000000000000c66      0x16d ../telemetre_soft_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_str     0x0000000000000d1d      0x16d ../telemetre_soft_bsp/\libhal_bsp.a(alt_load.o)
                                         0x254 (size before relaxing)
- .debug_str     0x0000000000000dd3       0x8a ../telemetre_soft_bsp/\libhal_bsp.a(alt_main.o)
+ .debug_str     0x0000000000000e8a       0x8a ../telemetre_soft_bsp/\libhal_bsp.a(alt_main.o)
                                         0x1cd (size before relaxing)
- .debug_str     0x0000000000000e5d       0x2f ../telemetre_soft_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_str     0x0000000000000f14       0x2f ../telemetre_soft_bsp/\libhal_bsp.a(alt_usleep.o)
                                         0x16f (size before relaxing)
- .debug_str     0x0000000000000e8c       0x76 ../telemetre_soft_bsp/\libhal_bsp.a(alt_write.o)
+ .debug_str     0x0000000000000f43       0x76 ../telemetre_soft_bsp/\libhal_bsp.a(alt_write.o)
                                         0x1f8 (size before relaxing)
- .debug_str     0x0000000000000f02       0xb9 ../telemetre_soft_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_str     0x0000000000000fb9       0xb9 ../telemetre_soft_bsp/\libhal_bsp.a(alt_sys_init.o)
                                         0x276 (size before relaxing)
- .debug_str     0x0000000000000fbb       0x2c ../telemetre_soft_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_str     0x0000000000001072       0x2c ../telemetre_soft_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
                                         0x22d (size before relaxing)
- .debug_str     0x0000000000000fe7       0x33 ../telemetre_soft_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_str     0x000000000000109e       0x33 ../telemetre_soft_bsp/\libhal_bsp.a(alt_busy_sleep.o)
                                         0x183 (size before relaxing)
- .debug_str     0x000000000000101a       0x1f ../telemetre_soft_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
+ .debug_str     0x00000000000010d1       0x1f ../telemetre_soft_bsp/\libhal_bsp.a(alt_dcache_flush_all.o)
                                         0x16d (size before relaxing)
- .debug_str     0x0000000000001039       0x14 ../telemetre_soft_bsp/\libhal_bsp.a(alt_errno.o)
+ .debug_str     0x00000000000010f0       0x14 ../telemetre_soft_bsp/\libhal_bsp.a(alt_errno.o)
                                         0x15d (size before relaxing)
- .debug_str     0x000000000000104d       0x1f ../telemetre_soft_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
+ .debug_str     0x0000000000001104       0x1f ../telemetre_soft_bsp/\libhal_bsp.a(alt_icache_flush_all.o)
                                         0x16d (size before relaxing)
- .debug_str     0x000000000000106c       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .debug_str     0x0000000000001123       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(altera_nios2_gen2_irq.o)
                                         0x174 (size before relaxing)
 
-.debug_loc      0x0000000000000000     0x157d
+.debug_loc      0x0000000000000000     0x16e3
  *(.debug_loc)
- .debug_loc     0x0000000000000000      0x195 obj/default/radar_2d.o
- .debug_loc     0x0000000000000195      0x4ce c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
- .debug_loc     0x0000000000000663       0x93 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
- .debug_loc     0x00000000000006f6       0xc6 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
- .debug_loc     0x00000000000007bc       0x97 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
- .debug_loc     0x0000000000000853       0x1e c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .debug_loc     0x0000000000000871      0x954 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
- .debug_loc     0x00000000000011c5      0x110 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
- .debug_loc     0x00000000000012d5       0xa5 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
- .debug_loc     0x000000000000137a       0x21 ../telemetre_soft_bsp/\libhal_bsp.a(alt_usleep.o)
- .debug_loc     0x000000000000139b       0xcf ../telemetre_soft_bsp/\libhal_bsp.a(alt_write.o)
- .debug_loc     0x000000000000146a       0x21 ../telemetre_soft_bsp/\libhal_bsp.a(alt_sys_init.o)
- .debug_loc     0x000000000000148b       0x8b ../telemetre_soft_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .debug_loc     0x0000000000001516       0x67 ../telemetre_soft_bsp/\libhal_bsp.a(alt_busy_sleep.o)
+ .debug_loc     0x0000000000000000      0x1b4 obj/default/radar_2d.o
+ .debug_loc     0x00000000000001b4      0x4ce c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
+ .debug_loc     0x0000000000000682       0x93 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-mul.o)
+ .debug_loc     0x0000000000000715       0xc6 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
+ .debug_loc     0x00000000000007db       0x81 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putchar.o)
+ .debug_loc     0x000000000000085c       0x97 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+ .debug_loc     0x00000000000008f3       0x1e c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_loc     0x0000000000000911      0x954 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+ .debug_loc     0x0000000000001265      0x110 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
+ .debug_loc     0x0000000000001375       0xc6 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putc.o)
+ .debug_loc     0x000000000000143b       0xa5 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
+ .debug_loc     0x00000000000014e0       0x21 ../telemetre_soft_bsp/\libhal_bsp.a(alt_usleep.o)
+ .debug_loc     0x0000000000001501       0xcf ../telemetre_soft_bsp/\libhal_bsp.a(alt_write.o)
+ .debug_loc     0x00000000000015d0       0x21 ../telemetre_soft_bsp/\libhal_bsp.a(alt_sys_init.o)
+ .debug_loc     0x00000000000015f1       0x8b ../telemetre_soft_bsp/\libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .debug_loc     0x000000000000167c       0x67 ../telemetre_soft_bsp/\libhal_bsp.a(alt_busy_sleep.o)
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -676,15 +715,17 @@ LOAD c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nio
                 [!provide]                        PROVIDE (__alt_heap_limit, 0x40000)
 OUTPUT(telemetre_soft.elf elf32-littlenios2)
 
-.debug_ranges   0x0000000000000000      0x258
+.debug_ranges   0x0000000000000000      0x288
  .debug_ranges  0x0000000000000000       0x20 ../telemetre_soft_bsp//obj/HAL/src/crt0.o
  .debug_ranges  0x0000000000000020       0x30 obj/default/radar_2d.o
  .debug_ranges  0x0000000000000050       0x60 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul\libgcc.a(lib2-divmod.o)
  .debug_ranges  0x00000000000000b0       0x18 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-printf.o)
- .debug_ranges  0x00000000000000c8       0x18 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
- .debug_ranges  0x00000000000000e0       0x10 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
- .debug_ranges  0x00000000000000f0       0xc8 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
- .debug_ranges  0x00000000000001b8       0x28 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
- .debug_ranges  0x00000000000001e0       0x10 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
- .debug_ranges  0x00000000000001f0       0x48 ../telemetre_soft_bsp/\libhal_bsp.a(alt_load.o)
- .debug_ranges  0x0000000000000238       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(alt_write.o)
+ .debug_ranges  0x00000000000000c8       0x18 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putchar.o)
+ .debug_ranges  0x00000000000000e0       0x18 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-puts.o)
+ .debug_ranges  0x00000000000000f8       0x10 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-strlen.o)
+ .debug_ranges  0x0000000000000108       0xc8 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-vfprintf.o)
+ .debug_ranges  0x00000000000001d0       0x28 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-fvwrite_small_dev.o)
+ .debug_ranges  0x00000000000001f8       0x18 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-putc.o)
+ .debug_ranges  0x0000000000000210       0x10 c:/intelfpga_lite/18.1/nios2eds/bin/gnu/h-x86_64-mingw32/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-mingw32/nios2-elf/lib/mno-hw-mul\libsmallc.a(lib_a-writer.o)
+ .debug_ranges  0x0000000000000220       0x48 ../telemetre_soft_bsp/\libhal_bsp.a(alt_load.o)
+ .debug_ranges  0x0000000000000268       0x20 ../telemetre_soft_bsp/\libhal_bsp.a(alt_write.o)
